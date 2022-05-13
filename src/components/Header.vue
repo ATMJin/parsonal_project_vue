@@ -1,0 +1,211 @@
+<template>
+  <header class="top_of_page">
+    <div class="cover_logo_and_nav">
+      <a class="link_of_logo" href="front_page.html">
+        <div class="logo_pic">
+          <img
+            class="logo"
+            width="80"
+            src="../assets/img/logo_s.svg"
+            alt="染一片春天Logo"
+          />
+        </div>
+      </a>
+      <h1 class="h1">染一片春天藍染教學工作室</h1>
+      <nav class="nav">
+        <h2 class="nav_h2">導覽列</h2>
+        <div class="cover_other_page">
+          <ul class="other_page">
+            <li><a href="course_page.html">課程介紹</a></li>
+            <div class="plumb_line"></div>
+            <li><a href="masterpiece_page.html">作品一覽</a></li>
+            <div class="plumb_line"></div>
+            <li><a href="skill_page.html">技法介紹</a></li>
+            <div class="plumb_line"></div>
+            <li><a href="about_me.html">關於我</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <div class="hamburger">
+      <div style="--i: 1"></div>
+      <div></div>
+      <div style="--i: -1"></div>
+    </div>
+  </header>
+</template>
+
+<style lang="scss">
+.top_of_page {
+  background-color: #c7f2ff;
+  text-align: center;
+}
+
+.top_of_page h1,
+.top_of_page h2 {
+  position: absolute;
+  height: 0;
+  width: 0;
+  z-index: -100;
+}
+
+.link_of_logo {
+  display: inline-block;
+}
+
+.logo_pic {
+  width: 10%;
+  min-width: 80px;
+  margin: auto;
+}
+
+.logo {
+  width: 100%;
+}
+
+.cover_logo_and_nav {
+  width: 90%;
+  max-width: 1200px;
+  padding-bottom: 5px;
+  margin: 0 auto;
+}
+
+.other_page {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.other_page * {
+  display: inline-block;
+}
+
+.cover_line_message {
+  color: #1a388c;
+}
+
+.other_page a {
+  color: #1a388c;
+  font-size: 1.25rem;
+  padding: 10px 1vw;
+}
+
+.other_page a:visited {
+  color: #1a388c;
+}
+
+.other_page a:hover {
+  border-radius: 0.25em;
+  background-color: #1a388c30;
+  transition: 0.5s;
+}
+
+@media screen and (max-resolution: 2.8dppx) {
+  .other_page a {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 384px) {
+  .hamburger {
+    width: 50px;
+    height: 40px;
+    border-radius: 0.25em;
+    position: fixed;
+    z-index: 11;
+    top: 15px;
+    right: 0;
+    cursor: pointer;
+    transition: 1s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    --r: 100px;
+    background-color: #fff7;
+  }
+
+  .hamburger > div {
+    background-color: #0007;
+    border-radius: 1px;
+    height: 2px;
+    width: 30px;
+    transition: 1s;
+    transform-origin: 30px 1px;
+  }
+
+  .hamburger > .arrow {
+    transform: translate(-1px, calc(13px * var(--i)))
+      rotate(calc(45deg * var(--i))) scaleX(0.7);
+  }
+
+  .other_page {
+    flex-direction: column;
+    background-color: #fff;
+    width: 100px;
+    line-height: 2em;
+    border-radius: 0.5em;
+    position: absolute;
+    top: 15px;
+    right: -100px;
+    transition: 1s;
+    --r: 3px;
+  }
+
+  .cover_other_page {
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #fff0;
+    visibility: hidden;
+    transition: 0.5s;
+  }
+
+  .cover_other_page.appear {
+    z-index: 10;
+    visibility: visible;
+    background-color: #fffa;
+    backdrop-filter: blur(5px);
+  }
+
+  .gotoLeft {
+    right: var(--r);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .cover_logo_and_nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 0;
+  }
+
+  .nav {
+    flex-grow: 1;
+  }
+
+  .other_page {
+    margin-top: 0;
+  }
+
+  .other_page a {
+    font-size: 1.5rem;
+    padding: 10px 3vw;
+  }
+
+  .plumb_line {
+    border: 1px solid #1a388cee;
+    background-color: #1a388cee;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .other_page a {
+    font-size: 1.75rem;
+    padding: 10px 30px;
+  }
+}
+</style>
