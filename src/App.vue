@@ -1,20 +1,25 @@
 <script setup>
 // This starter template is using Vue 3 <script setup> SFCs
 // Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
-import HelloWorld from "./components/HelloWorld.vue";
-import Header from "./components/Header.vue";
-import Footer from "./components/Footer.vue";
+import WebHeader from "./components/WebHeader.vue";
+import WebFooter from "./components/WebFooter.vue";
+import HomePage from "./HomePage.vue";
+import Course from "./Course.vue";
+import Masterpiece from "./Masterpiece.vue";
+import Skill from "./Skill.vue";
 import AboutMe from "./AboutMe.vue";
 </script>
 
 <template>
-  <Header></Header>
-  <main>
-    <AboutMe></AboutMe>
-  </main>
-  <!-- <HelloWorld msg="Hello Vue 3 + Vite" /> -->
+  <WebHeader></WebHeader>
 
-  <Footer></Footer>
+  <!-- <HomePage></HomePage> -->
+  <!-- <Course></Course> -->
+  <Masterpiece></Masterpiece>
+  <!-- <Skill></Skill> -->
+  <!-- <AboutMe></AboutMe> -->
+
+  <WebFooter></WebFooter>
 </template>
 
 <style>

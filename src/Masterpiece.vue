@@ -1,286 +1,286 @@
 <template>
-  <!-- FIXME min-width->max-width -->
-  <section class="masterpiece">
-    <!-- 小圖 -->
-    <div class="cover_min_pic">
-      <div class="min_pic">
-        <div class="pic">
-          <img
-            src="./assets/img/min/masterpiece_01.jpg"
-            alt=""
-            data-picIndex="01"
-            data-picName="masterpiece_01"
-          />
-        </div>
-        <div class="pic">
-          <img
-            src="./assets/img/min/masterpiece_02.jpg"
-            alt=""
-            data-picIndex="02"
-            data-picName="masterpiece_02"
-          />
-        </div>
-        <div class="pic">
-          <img
-            src="./assets/img/min/masterpiece_03.jpg"
-            alt=""
-            data-picIndex="03"
-            data-picName="masterpiece_03"
-          />
-        </div>
-        <div class="pic">
-          <img
-            src="./assets/img/min/masterpiece_04.jpg"
-            alt=""
-            data-picIndex="04"
-            data-picName="masterpiece_04"
-          />
-        </div>
-        <div class="pic">
-          <img
-            src="./assets/img/min/masterpiece_05.jpg"
-            alt=""
-            data-picIndex="05"
-            data-picName="masterpiece_05"
-          />
-        </div>
-        <div class="pic">
-          <img
-            src="./assets/img/min/masterpiece_06.jpg"
-            alt=""
-            data-picIndex="06"
-            data-picName="masterpiece_06"
-          />
-        </div>
-        <div class="pic">
-          <img
-            src="./assets/img/min/masterpiece_07.jpg"
-            alt=""
-            data-picIndex="07"
-            data-picName="masterpiece_07"
-          />
-        </div>
-        <div class="pic">
-          <img
-            src="./assets/img/min/masterpiece_08.jpg"
-            alt=""
-            data-picIndex="08"
-            data-picName="masterpiece_08"
-          />
-        </div>
-        <div class="pic">
-          <img
-            src="./assets/img/min/masterpiece_09.jpg"
-            alt=""
-            data-picIndex="09"
-            data-picName="masterpiece_09"
-          />
-        </div>
-        <div class="pic">
-          <img
-            src="./assets/img/min/masterpiece_10.jpg"
-            alt=""
-            data-picIndex="10"
-            data-picName="masterpiece_10"
-          />
-        </div>
-        <div class="pic">
-          <img
-            src="./assets/img/min/masterpiece_11.jpg"
-            alt=""
-            data-picIndex="11"
-            data-picName="masterpiece_11"
-          />
-        </div>
-        <div class="pic">
-          <img
-            src="./assets/img/min/masterpiece_12.jpg"
-            alt=""
-            data-picIndex="12"
-            data-picName="masterpiece_12"
-          />
-        </div>
-        <div class="pic">
-          <img
-            src="./assets/img/min/masterpiece_13.jpg"
-            alt=""
-            data-picIndex="13"
-            data-picName="masterpiece_13"
-          />
-        </div>
-        <div class="pic">
-          <img
-            src="./assets/img/min/masterpiece_14.jpg"
-            alt=""
-            data-picIndex="14"
-            data-picName="masterpiece_14"
-          />
-        </div>
-        <div class="pic">
-          <img
-            src="./assets/img/min/masterpiece_15.jpg"
-            alt=""
-            data-picIndex="15"
-            data-picName="masterpiece_15"
-          />
-        </div>
-        <div class="pic">
-          <img
-            src="./assets/img/min/masterpiece_16.jpg"
-            alt=""
-            data-picIndex="16"
-            data-picName="masterpiece_16"
-          />
-        </div>
-        <div class="pic">
-          <img
-            src="./assets/img/min/masterpiece_17.jpg"
-            alt=""
-            data-picIndex="17"
-            data-picName="masterpiece_17"
-          />
-        </div>
-        <div class="pic">
-          <img
-            src="./assets/img/min/masterpiece_18.jpg"
-            alt=""
-            data-picIndex="18"
-            data-picName="masterpiece_18"
-          />
-        </div>
-        <div class="pic">
-          <img
-            src="./assets/img/min/masterpiece_19.jpg"
-            alt=""
-            data-picIndex="19"
-            data-picName="masterpiece_19"
-          />
-        </div>
-        <div class="pic">
-          <img
-            src="./assets/img/min/masterpiece_20.jpg"
-            alt=""
-            data-picIndex="20"
-            data-picName="masterpiece_20"
-          />
-        </div>
-      </div>
-    </div>
-
-    <div class="beside_min_pics">
-      <!-- 大圖和介紹文字 -->
-      <div class="card">
-        <div class="pic show">
-          <img src="./assets/img/masterpiece_01.jpg" />
-        </div>
-        <div class="pic hidden">
-          <img src="./assets/img/masterpiece_01.jpg" />
-        </div>
-
-        <div class="text show">
-          <h2>小狐狸</h2>
-          <p>
-            在處理好的布上描繪線稿後，以一針一線仔細沿著畫好的輪廓遊走。當最後都縫製好時，用力拉扯預留的線頭，使布料緊密地重疊在一起。
-          </p>
-          <p>
-            緊密重疊的部分染料不易滲透，便呈現較淺的白色，其餘部分則呈現染料的顏色。
-          </p>
-        </div>
-        <div class="text hidden">
-          <h2>小狐狸</h2>
-          <p>
-            在處理好的布上描繪線稿後，以一針一線仔細沿著畫好的輪廓遊走。當最後都縫製好時，用力拉扯預留的線頭，使布料緊密地重疊在一起。
-          </p>
-          <p>
-            緊密重疊的部分染料不易滲透，便呈現較淺的白色，其餘部分則呈現染料的顏色。
-          </p>
-        </div>
-      </div>
-      <!-- 可以連結到課程的區塊 -->
-      <aside class="cover_you_know">
-        <div class="you_know show">
-          <h3>你知道嗎?</h3>
-          <p>
-            這件作品是用<span class="skill_name">縫染</span>的技法製作而成的
-          </p>
-          <div class="link_to_other">
-            <a href="course_page.html">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                fill="currentColor"
-                class="bi bi-chevron-left"
-                viewBox="0 0 16 16"
-              >
-                <path
-                  fill-rule="evenodd"
-                  d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"
-                />
-              </svg>
-              查詢相關課程
-            </a>
-            <a href="skill_page.html">
-              查詢相關技法
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                fill="currentColor"
-                class="bi bi-chevron-right"
-                viewBox="0 0 16 16"
-              >
-                <path
-                  fill-rule="evenodd"
-                  d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"
-                />
-              </svg>
-            </a>
+  <main>
+    <!-- FIXME min-width->max-width -->
+    <section class="masterpiece">
+      <!-- 小圖 -->
+      <div class="cover_min_pic">
+        <div class="min_pic">
+          <div class="pic">
+            <img
+              src="./assets/img/min/masterpiece_01.jpg"
+              alt=""
+              data-picIndex="01"
+              data-picName="masterpiece_01"
+            />
+          </div>
+          <div class="pic">
+            <img
+              src="./assets/img/min/masterpiece_02.jpg"
+              alt=""
+              data-picIndex="02"
+              data-picName="masterpiece_02"
+            />
+          </div>
+          <div class="pic">
+            <img
+              src="./assets/img/min/masterpiece_03.jpg"
+              alt=""
+              data-picIndex="03"
+              data-picName="masterpiece_03"
+            />
+          </div>
+          <div class="pic">
+            <img
+              src="./assets/img/min/masterpiece_04.jpg"
+              alt=""
+              data-picIndex="04"
+              data-picName="masterpiece_04"
+            />
+          </div>
+          <div class="pic">
+            <img
+              src="./assets/img/min/masterpiece_05.jpg"
+              alt=""
+              data-picIndex="05"
+              data-picName="masterpiece_05"
+            />
+          </div>
+          <div class="pic">
+            <img
+              src="./assets/img/min/masterpiece_06.jpg"
+              alt=""
+              data-picIndex="06"
+              data-picName="masterpiece_06"
+            />
+          </div>
+          <div class="pic">
+            <img
+              src="./assets/img/min/masterpiece_07.jpg"
+              alt=""
+              data-picIndex="07"
+              data-picName="masterpiece_07"
+            />
+          </div>
+          <div class="pic">
+            <img
+              src="./assets/img/min/masterpiece_08.jpg"
+              alt=""
+              data-picIndex="08"
+              data-picName="masterpiece_08"
+            />
+          </div>
+          <div class="pic">
+            <img
+              src="./assets/img/min/masterpiece_09.jpg"
+              alt=""
+              data-picIndex="09"
+              data-picName="masterpiece_09"
+            />
+          </div>
+          <div class="pic">
+            <img
+              src="./assets/img/min/masterpiece_10.jpg"
+              alt=""
+              data-picIndex="10"
+              data-picName="masterpiece_10"
+            />
+          </div>
+          <div class="pic">
+            <img
+              src="./assets/img/min/masterpiece_11.jpg"
+              alt=""
+              data-picIndex="11"
+              data-picName="masterpiece_11"
+            />
+          </div>
+          <div class="pic">
+            <img
+              src="./assets/img/min/masterpiece_12.jpg"
+              alt=""
+              data-picIndex="12"
+              data-picName="masterpiece_12"
+            />
+          </div>
+          <div class="pic">
+            <img
+              src="./assets/img/min/masterpiece_13.jpg"
+              alt=""
+              data-picIndex="13"
+              data-picName="masterpiece_13"
+            />
+          </div>
+          <div class="pic">
+            <img
+              src="./assets/img/min/masterpiece_14.jpg"
+              alt=""
+              data-picIndex="14"
+              data-picName="masterpiece_14"
+            />
+          </div>
+          <div class="pic">
+            <img
+              src="./assets/img/min/masterpiece_15.jpg"
+              alt=""
+              data-picIndex="15"
+              data-picName="masterpiece_15"
+            />
+          </div>
+          <div class="pic">
+            <img
+              src="./assets/img/min/masterpiece_16.jpg"
+              alt=""
+              data-picIndex="16"
+              data-picName="masterpiece_16"
+            />
+          </div>
+          <div class="pic">
+            <img
+              src="./assets/img/min/masterpiece_17.jpg"
+              alt=""
+              data-picIndex="17"
+              data-picName="masterpiece_17"
+            />
+          </div>
+          <div class="pic">
+            <img
+              src="./assets/img/min/masterpiece_18.jpg"
+              alt=""
+              data-picIndex="18"
+              data-picName="masterpiece_18"
+            />
+          </div>
+          <div class="pic">
+            <img
+              src="./assets/img/min/masterpiece_19.jpg"
+              alt=""
+              data-picIndex="19"
+              data-picName="masterpiece_19"
+            />
+          </div>
+          <div class="pic">
+            <img
+              src="./assets/img/min/masterpiece_20.jpg"
+              alt=""
+              data-picIndex="20"
+              data-picName="masterpiece_20"
+            />
           </div>
         </div>
-        <div class="you_know hidden">
-          <h3>你知道嗎?</h3>
-          <p>
-            這件作品是用<span class="skill_name">縫染</span>的技法製作而成的
-          </p>
-          <div class="link_to_other">
-            <a href="course_page.html">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                fill="currentColor"
-                class="bi bi-chevron-left"
-                viewBox="0 0 16 16"
-              >
-                <path
-                  fill-rule="evenodd"
-                  d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"
-                />
-              </svg>
-              查詢相關課程
-            </a>
-            <a href="skill_page.html">
-              查詢相關技法
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                fill="currentColor"
-                class="bi bi-chevron-right"
-                viewBox="0 0 16 16"
-              >
-                <path
-                  fill-rule="evenodd"
-                  d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"
-                />
-              </svg>
-            </a>
+      </div>
+      <div class="beside_min_pics">
+        <!-- 大圖和介紹文字 -->
+        <div class="card">
+          <div class="pic show">
+            <img src="./assets/img/masterpiece_01.jpg" />
+          </div>
+          <div class="pic hidden">
+            <img src="./assets/img/masterpiece_01.jpg" />
+          </div>
+          <div class="text show">
+            <h2>小狐狸</h2>
+            <p>
+              在處理好的布上描繪線稿後，以一針一線仔細沿著畫好的輪廓遊走。當最後都縫製好時，用力拉扯預留的線頭，使布料緊密地重疊在一起。
+            </p>
+            <p>
+              緊密重疊的部分染料不易滲透，便呈現較淺的白色，其餘部分則呈現染料的顏色。
+            </p>
+          </div>
+          <div class="text hidden">
+            <h2>小狐狸</h2>
+            <p>
+              在處理好的布上描繪線稿後，以一針一線仔細沿著畫好的輪廓遊走。當最後都縫製好時，用力拉扯預留的線頭，使布料緊密地重疊在一起。
+            </p>
+            <p>
+              緊密重疊的部分染料不易滲透，便呈現較淺的白色，其餘部分則呈現染料的顏色。
+            </p>
           </div>
         </div>
-      </aside>
-    </div>
-  </section>
+        <!-- 可以連結到課程的區塊 -->
+        <aside class="cover_you_know">
+          <div class="you_know show">
+            <h3>你知道嗎?</h3>
+            <p>
+              這件作品是用<span class="skill_name">縫染</span>的技法製作而成的
+            </p>
+            <div class="link_to_other">
+              <a href="course_page.html">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-chevron-left"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"
+                  />
+                </svg>
+                查詢相關課程
+              </a>
+              <a href="skill_page.html">
+                查詢相關技法
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-chevron-right"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div class="you_know hidden">
+            <h3>你知道嗎?</h3>
+            <p>
+              這件作品是用<span class="skill_name">縫染</span>的技法製作而成的
+            </p>
+            <div class="link_to_other">
+              <a href="course_page.html">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-chevron-left"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"
+                  />
+                </svg>
+                查詢相關課程
+              </a>
+              <a href="skill_page.html">
+                查詢相關技法
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-chevron-right"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
 </template>
 
 <style lang="scss" scoped>
