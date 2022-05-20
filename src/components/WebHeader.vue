@@ -1,7 +1,7 @@
 <template>
   <header class="top_of_page">
     <div class="cover_logo_and_nav">
-      <a class="link_of_logo" href="front_page.html">
+      <!-- <a class="link_of_logo" href="front_page.html">
         <div class="logo_pic">
           <img
             class="logo"
@@ -10,19 +10,29 @@
             alt="染一片春天Logo"
           />
         </div>
-      </a>
+      </a> -->
+      <router-link to="/">
+        <div class="logo_pic">
+          <img
+            class="logo"
+            width="80"
+            src="../assets/img/logo_s.svg"
+            alt="染一片春天Logo"
+          />
+        </div>
+      </router-link>
       <h1 class="h1">染一片春天藍染教學工作室</h1>
       <nav class="nav">
         <h2 class="nav_h2">導覽列</h2>
         <div class="cover_other_page">
           <ul class="other_page">
-            <li><a href="course_page.html">課程介紹</a></li>
+            <li><router-link to="/Course">課程介紹</router-link></li>
             <div class="plumb_line"></div>
-            <li><a href="masterpiece_page.html">作品一覽</a></li>
+            <li><router-link to="/Masterpiece">作品一覽</router-link></li>
             <div class="plumb_line"></div>
-            <li><a href="skill_page.html">技法介紹</a></li>
+            <li><router-link to="/Skill">技法介紹</router-link></li>
             <div class="plumb_line"></div>
-            <li><a href="about_me.html">關於我</a></li>
+            <li><router-link to="/AboutMe">關於我</router-link></li>
           </ul>
         </div>
       </nav>

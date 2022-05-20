@@ -3,19 +3,19 @@
 // Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
 import WebHeader from "./components/WebHeader.vue";
 import WebFooter from "./components/WebFooter.vue";
-import HomePage from "./HomePage.vue";
-import Course from "./Course.vue";
-import Masterpiece from "./Masterpiece.vue";
-import Skill from "./Skill.vue";
-import AboutMe from "./AboutMe.vue";
+// import HomePage from "./HomePage.vue";
+// import Course from "./Course.vue";
+// import Masterpiece from "./Masterpiece.vue";
+// import Skill from "./Skill.vue";
+// import AboutMe from "./AboutMe.vue";
 </script>
 
 <template>
   <WebHeader></WebHeader>
-
+  <router-view></router-view>
   <!-- <HomePage></HomePage> -->
   <!-- <Course></Course> -->
-  <Masterpiece></Masterpiece>
+  <!-- <Masterpiece></Masterpiece> -->
   <!-- <Skill></Skill> -->
   <!-- <AboutMe></AboutMe> -->
 

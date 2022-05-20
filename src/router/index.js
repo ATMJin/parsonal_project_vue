@@ -2,13 +2,17 @@ import {
   createRouter,
   createWebHistory
 } from "vue-router";
-import HomeView from '../App.vue'
+import HomePage from '../HomePage.vue'
+import Course from '../Course.vue'
+import Masterpiece from '../Masterpiece.vue'
+import Skill from '../Skill.vue'
+import AboutMe from '../AboutMe.vue'
 
 const routes = [{
     // 網址路徑
     path: '/',
     name: 'home',
-    component: HomeView,
+    component: HomePage,
     // 宣告meta值
     meta: {
       title: "Home",
@@ -16,18 +20,41 @@ const routes = [{
     }
   },
   {
-    path: '/another',
-    name: 'another',
-    // route level code-splitting
-    // this generates a separate chunk (another.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import( /* webpackChunkName: "another" */ '../AboutMe.vue'),
-    // component: () => import("../views/HelloWorld.vue"),
+    path: '/Course',
+    name: 'Course',
+    component: Course,
     meta: {
       title: "Another Page",
       description: "用表格顯示API取得的資料",
     }
-  }
+  },
+  {
+    path: '/Masterpiece',
+    name: 'Masterpiece',
+    component: Masterpiece,
+    meta: {
+      title: "Another Page",
+      description: "用表格顯示API取得的資料",
+    }
+  },
+  {
+    path: '/Skill',
+    name: 'Skill',
+    component: Skill,
+    meta: {
+      title: "Another Page",
+      description: "用表格顯示API取得的資料",
+    }
+  },
+  {
+    path: '/AboutMe',
+    name: 'AboutMe',
+    component: AboutMe,
+    meta: {
+      title: "Another Page",
+      description: "用表格顯示API取得的資料",
+    }
+  },
 ]
 
 const router = createRouter({

@@ -247,7 +247,7 @@
 <style lang="scss" scoped>
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css");
 
-a[href="course_page.html"] {
+a[href="/Course"] {
   border-radius: 0.25em;
   background-color: #1a388c30;
 }
