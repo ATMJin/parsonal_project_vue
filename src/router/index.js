@@ -2,6 +2,7 @@ import {
   createRouter,
   createWebHistory
 } from "vue-router";
+
 import HomePage from '../HomePage.vue'
 import Course from '../Course.vue'
 import Masterpiece from '../Masterpiece.vue'
@@ -15,8 +16,9 @@ const routes = [{
     component: HomePage,
     // 宣告meta值
     meta: {
-      title: "Home",
-      description: "不同輸入類型 text, radio, select、同一 component 切換 prop 來改變對應的輸入類型",
+      title: "染一片春天|藍染教學工作室",
+      description: "「染一片春天」手作坊，以做中學為主旨，有時同學一起來切磋，教學也交朋友。歡迎有興趣的朋友，一起來染一片春天工作室，一同腦力激盪、一同創作。",
+      keywords: "染一片春天、藍染、藍染教學、藍染教學工作室、縫染、綁染、蠟染、植物染",
     }
   },
   {
@@ -24,8 +26,9 @@ const routes = [{
     name: 'Course',
     component: Course,
     meta: {
-      title: "Another Page",
-      description: "用表格顯示API取得的資料",
+      title: "染一片春天|課程介紹",
+      description: "「染一片春天」手作坊的相關課程。",
+      keywords: "染一片春天、藍染、藍染教學、藍染教學工作室、縫染、綁染、蠟染、植物染",
     }
   },
   {
@@ -33,8 +36,9 @@ const routes = [{
     name: 'Masterpiece',
     component: Masterpiece,
     meta: {
-      title: "Another Page",
-      description: "用表格顯示API取得的資料",
+      title: "染一片春天|作品一覽",
+      description: "「染一片春天」手作坊，春風老師的個人作品",
+      keywords: "染一片春天、藍染、藍染教學、藍染教學工作室、縫染、綁染、蠟染、植物染",
     }
   },
   {
@@ -42,8 +46,9 @@ const routes = [{
     name: 'Skill',
     component: Skill,
     meta: {
-      title: "Another Page",
-      description: "用表格顯示API取得的資料",
+      title: "染一片春天|技法介紹",
+      description: "藍染相關基本技法介紹。",
+      keywords: "染一片春天、藍染、藍染教學、藍染教學工作室、縫染、綁染、蠟染、植物染",
     }
   },
   {
@@ -51,8 +56,9 @@ const routes = [{
     name: 'AboutMe',
     component: AboutMe,
     meta: {
-      title: "Another Page",
-      description: "用表格顯示API取得的資料",
+      title: "染一片春天|關於我",
+      description: "關於「染一片春天」手作坊的春風老師。",
+      keywords: "染一片春天、藍染、藍染教學、藍染教學工作室、縫染、綁染、蠟染、植物染",
     }
   },
 ]
@@ -81,8 +87,24 @@ router.beforeEach((to, from, next) => {
       metaTag.content = to.meta.description
       document.getElementsByTagName('head')[0].appendChild(metaTag);
     }
-
   }
+
+  // 改變網頁的 keywords
+  if (to.meta.keywords) {
+    let keywords = document.querySelector("meta[name='keywords']")
+    // 當網頁已有keywords時改寫keywords
+    if (keywords) {
+      document.querySelector("meta[name='keywords']").content = to.meta.keywords
+    } else {
+      // 網頁沒有keywords時建立並插入head
+      let metaTag = document.createElement('meta');
+      metaTag.name = "keywords"
+      metaTag.content = to.meta.keywords
+      document.getElementsByTagName('head')[0].appendChild(metaTag);
+    }
+  }
+
+
   next();
 })
 
