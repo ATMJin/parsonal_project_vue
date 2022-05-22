@@ -1,49 +1,52 @@
 <template>
   <header class="top_of_page">
     <div class="cover_logo_and_nav">
-      <!-- <a class="link_of_logo" href="front_page.html">
+      <router-link class="link_of_logo" to="/">
         <div class="logo_pic">
-          <img
-            class="logo"
-            width="80"
-            src="../assets/img/logo_s.svg"
-            alt="染一片春天Logo"
-          />
-        </div>
-      </a> -->
-      <router-link to="/">
-        <div class="logo_pic">
-          <img
-            class="logo"
-            width="80"
-            src="../assets/img/logo_s.svg"
-            alt="染一片春天Logo"
-          />
+          <img class="logo" width="80" src="../assets/img/logo_s.svg" alt="染一片春天Logo" />
         </div>
       </router-link>
       <h1 class="h1">染一片春天藍染教學工作室</h1>
       <nav class="nav">
         <h2 class="nav_h2">導覽列</h2>
-        <div class="cover_other_page">
-          <ul class="other_page">
-            <li><router-link to="/Course">課程介紹</router-link></li>
+        <div :class="['cover_other_page', { 'appear': appearNav }]" @click.self="changeToggle">
+          <ul :class="['other_page', { 'gotoLeft': appearNav }]">
+            <li>
+              <router-link to="/Course">課程介紹</router-link>
+            </li>
             <div class="plumb_line"></div>
-            <li><router-link to="/Masterpiece">作品一覽</router-link></li>
+            <li>
+              <router-link to="/Masterpiece">作品一覽</router-link>
+            </li>
             <div class="plumb_line"></div>
-            <li><router-link to="/Skill">技法介紹</router-link></li>
+            <li>
+              <router-link to="/Skill">技法介紹</router-link>
+            </li>
             <div class="plumb_line"></div>
-            <li><router-link to="/AboutMe">關於我</router-link></li>
+            <li>
+              <router-link to="/AboutMe">關於我</router-link>
+            </li>
           </ul>
         </div>
       </nav>
     </div>
-    <div class="hamburger">
-      <div style="--i: 1"></div>
+    <div :class="['hamburger', { 'gotoLeft': appearNav }]" @click="changeToggle">
+      <div style="--i: 1" :class="[{ 'arrow': appearNav }]"></div>
       <div></div>
-      <div style="--i: -1"></div>
+      <div style="--i: -1" :class="[{ 'arrow': appearNav }]"></div>
     </div>
   </header>
 </template>
+
+<script setup>
+import { ref } from 'vue';
+
+let appearNav = ref(false);
+
+const changeToggle = () => {
+  appearNav.value = !appearNav.value;
+};
+</script>
 
 <style lang="scss">
 .top_of_page {
@@ -134,7 +137,7 @@
     background-color: #fff7;
   }
 
-  .hamburger > div {
+  .hamburger>div {
     background-color: #0007;
     border-radius: 1px;
     height: 2px;
@@ -143,9 +146,8 @@
     transform-origin: 30px 1px;
   }
 
-  .hamburger > .arrow {
-    transform: translate(-1px, calc(13px * var(--i)))
-      rotate(calc(45deg * var(--i))) scaleX(0.7);
+  .hamburger>.arrow {
+    transform: translate(-1px, calc(13px * var(--i))) rotate(calc(45deg * var(--i))) scaleX(0.7);
   }
 
   .other_page {
