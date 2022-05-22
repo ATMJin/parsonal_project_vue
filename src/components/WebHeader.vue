@@ -52,14 +52,14 @@ const changeToggle = () => {
 .top_of_page {
   background-color: #c7f2ff;
   text-align: center;
-}
 
-.top_of_page h1,
-.top_of_page h2 {
-  position: absolute;
-  height: 0;
-  width: 0;
-  z-index: -100;
+  h1,
+  h2 {
+    position: absolute;
+    height: 0;
+    width: 0;
+    z-index: -100;
+  }
 }
 
 .link_of_logo {
@@ -86,30 +86,30 @@ const changeToggle = () => {
 .other_page {
   display: flex;
   justify-content: space-evenly;
-}
 
-.other_page * {
-  display: inline-block;
+  * {
+    display: inline-block;
+  }
+
+  a {
+    color: #1a388c;
+    font-size: 1.25rem;
+    padding: 10px 1vw;
+
+    &:visited {
+      color: #1a388c;
+    }
+
+    &:hover {
+      border-radius: 0.25em;
+      background-color: #1a388c30;
+      transition: 0.5s;
+    }
+  }
 }
 
 .cover_line_message {
   color: #1a388c;
-}
-
-.other_page a {
-  color: #1a388c;
-  font-size: 1.25rem;
-  padding: 10px 1vw;
-}
-
-.other_page a:visited {
-  color: #1a388c;
-}
-
-.other_page a:hover {
-  border-radius: 0.25em;
-  background-color: #1a388c30;
-  transition: 0.5s;
 }
 
 @media screen and (max-resolution: 2.8dppx) {
@@ -135,19 +135,19 @@ const changeToggle = () => {
     align-items: center;
     --r: 100px;
     background-color: #fff7;
-  }
 
-  .hamburger>div {
-    background-color: #0007;
-    border-radius: 1px;
-    height: 2px;
-    width: 30px;
-    transition: 1s;
-    transform-origin: 30px 1px;
-  }
+    >div {
+      background-color: #0007;
+      border-radius: 1px;
+      height: 2px;
+      width: 30px;
+      transition: 1s;
+      transform-origin: 30px 1px;
+    }
 
-  .hamburger>.arrow {
-    transform: translate(-1px, calc(13px * var(--i))) rotate(calc(45deg * var(--i))) scaleX(0.7);
+    >.arrow {
+      transform: translate(-1px, calc(13px * var(--i))) rotate(calc(45deg * var(--i))) scaleX(0.7);
+    }
   }
 
   .other_page {
@@ -173,13 +173,13 @@ const changeToggle = () => {
     background-color: #fff0;
     visibility: hidden;
     transition: 0.5s;
-  }
 
-  .cover_other_page.appear {
-    z-index: 10;
-    visibility: visible;
-    background-color: #fffa;
-    backdrop-filter: blur(5px);
+    &.appear {
+      z-index: 10;
+      visibility: visible;
+      background-color: #fffa;
+      backdrop-filter: blur(5px);
+    }
   }
 
   .gotoLeft {
@@ -201,23 +201,21 @@ const changeToggle = () => {
 
   .other_page {
     margin-top: 0;
-  }
 
-  .other_page a {
-    font-size: 1.5rem;
-    padding: 10px 3vw;
+    a {
+      font-size: 1.5rem;
+      padding: 10px 3vw;
+
+      @media screen and (min-width: 992px) {
+        font-size: 1.75rem;
+        padding: 10px 30px;
+      }
+    }
   }
 
   .plumb_line {
     border: 1px solid #1a388cee;
     background-color: #1a388cee;
-  }
-}
-
-@media screen and (min-width: 992px) {
-  .other_page a {
-    font-size: 1.75rem;
-    padding: 10px 30px;
   }
 }
 </style>
