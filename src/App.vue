@@ -1,24 +1,11 @@
 <script setup>
-// This starter template is using Vue 3 <script setup> SFCs
-// Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
 import WebHeader from "./components/WebHeader.vue";
 import WebFooter from "./components/WebFooter.vue";
-// import HomePage from "./HomePage.vue";
-// import Course from "./Course.vue";
-// import Masterpiece from "./Masterpiece.vue";
-// import Skill from "./Skill.vue";
-// import AboutMe from "./AboutMe.vue";
 </script>
 
 <template>
   <WebHeader></WebHeader>
   <router-view></router-view>
-  <!-- <HomePage></HomePage> -->
-  <!-- <Course></Course> -->
-  <!-- <Masterpiece></Masterpiece> -->
-  <!-- <Skill></Skill> -->
-  <!-- <AboutMe></AboutMe> -->
-
   <WebFooter></WebFooter>
 </template>
 
@@ -30,6 +17,7 @@ import WebFooter from "./components/WebFooter.vue";
   text-align: center;
   color: #2c3e50;
 }
+
 * {
   box-sizing: border-box;
 }
