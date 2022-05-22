@@ -13,44 +13,23 @@
           <div class="many_bussines_icons">
             <a href="https://line.me/ti/p/CC5-CxTp8R" target="_blank">
               <div class="bussines_icon">
-                <img
-                  width="50"
-                  src="../assets/img/LINE_Brand_icon.png"
-                  alt="染一片春天的LINE"
-                />
+                <img width="50" src="../assets/img/LINE_Brand_icon.png" alt="染一片春天的LINE" />
               </div>
             </a>
-            <a
-              href="https://www.facebook.com/%E6%9F%93%E4%B8%80%E7%89%87%E6%98%A5%E5%A4%A9-%E6%89%8B%E4%BD%9C%E5%9D%8A-369868907123043/"
-              target="_blank"
-            >
+            <a href="https://www.facebook.com/%E6%9F%93%E4%B8%80%E7%89%87%E6%98%A5%E5%A4%A9-%E6%89%8B%E4%BD%9C%E5%9D%8A-369868907123043/"
+              target="_blank">
               <div class="bussines_icon">
-                <img
-                  width="50"
-                  src="../assets/img/facebook.png"
-                  alt="染一片春天的Facebook主頁"
-                />
+                <img width="50" src="../assets/img/facebook.png" alt="染一片春天的Facebook主頁" />
               </div>
             </a>
-            <a
-              href="https://www.instagram.com/flower.huang.180/"
-              target="_blank"
-            >
+            <a href="https://www.instagram.com/flower.huang.180/" target="_blank">
               <div class="bussines_icon">
-                <img
-                  width="50"
-                  src="../assets/img/instagram.png"
-                  alt="染一片春天的instagram"
-                />
+                <img width="50" src="../assets/img/instagram.png" alt="染一片春天的instagram" />
               </div>
             </a>
             <a href="https://shopee.tw/jojoppq?smtt=0.0.9" target="_blank">
               <div class="bussines_icon">
-                <img
-                  width="50"
-                  src="../assets/img/shopee.svg"
-                  alt="染一片春天的蝦皮賣場"
-                />
+                <img width="50" src="../assets/img/shopee.svg" alt="染一片春天的蝦皮賣場" />
               </div>
             </a>
           </div>
@@ -73,11 +52,11 @@
   background-color: #fff9;
   padding-top: 10px;
   padding-bottom: 10px;
-}
 
-.under_page p {
-  line-height: 2em;
-  letter-spacing: 1px;
+  p {
+    line-height: 2em;
+    letter-spacing: 1px;
+  }
 }
 
 .address_and_tel {
@@ -97,20 +76,20 @@
 .many_bussines_icons {
   display: flex;
   justify-content: space-between;
-}
 
-.many_bussines_icons > a {
-  display: flex;
-  align-items: flex-end;
+  >a {
+    display: flex;
+    align-items: flex-end;
+  }
 }
 
 .bussines_icon {
   /* display: inline-block; */
   width: 50px;
-}
 
-.bussines_icon > img {
-  width: 100%;
+  >img {
+    width: 100%;
+  }
 }
 
 .front_of_copyright {
@@ -129,10 +108,10 @@
     display: flex;
     justify-content: center;
     max-width: 1200px;
-  }
 
-  .cover_address_and_icon > div {
-    margin: 0 10px;
+    >div {
+      margin: 0 10px;
+    }
   }
 
   .address_and_tel {
