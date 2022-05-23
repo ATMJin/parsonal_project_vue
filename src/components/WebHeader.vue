@@ -106,6 +106,12 @@ const changeToggle = () => {
       transition: 0.5s;
     }
   }
+
+  // vue-router 當前頁面時自動加上的 class
+  .router-link-active {
+    border-radius: 0.25em;
+    background-color: #1a388c30;
+  }
 }
 
 .cover_line_message {
