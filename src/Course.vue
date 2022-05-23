@@ -6,7 +6,7 @@
           <div class="col_12 col_md_4 col_xl_3">
             <div class="card">
               <div class="pic">
-                <img src="./assets/img/course_01.jpg" />
+                <img src="./assets/img/course_01.jpg" @click="open" />
               </div>
               <div class="text">
                 <div>
@@ -217,7 +217,7 @@
         <!-- <div class="row "> -->
         <!-- </div> -->
       </div>
-      <aside class="pic_3d">
+      <aside class="pic_3d" @click.self="d3_displayNone" ref="pic_3d">
         <div class="d3_position">
           <button id="pre"><i class="bi bi-chevron-compact-left"></i></button>
           <div class="out_3d">
@@ -238,19 +238,95 @@
           </div>
           <button id="next"><i class="bi bi-chevron-compact-right"></i></button>
         </div>
-        <div class="close_3d"></div>
+        <div class="close_3d" @click="d3_displayNone"></div>
       </aside>
     </section>
   </main>
 </template>
 
+<script setup>
+import { ref, onMounted } from 'vue';
+const pic_3d = ref(null);
+
+// 調整3D燈箱寬度
+function wResize() {
+  let w = window.getComputedStyle($(".out_3d")).width;
+  w = w.replace("px", "") / 2;
+  for (let i = 0; i < $All(".inner_3d").length; i++) {
+    $All(".inner_3d")[i].style.transform = `rotateY(calc(var(--i) * 90deg))translateZ(${w}px)`;
+  }
+}
+
+// 調整圖片高度
+function reY() {
+  let maxH = 0;
+  let img = $All(".inner_3d>img");
+  for (let i = 0; i < img.length; i++) {
+    let imgH = window.getComputedStyle(img[i]).height.replace("px", "");
+    if (imgH > maxH) maxH = imgH;
+  }
+  let y = 0;
+  y = (window.getComputedStyle($(".pic_3d")).height.replace("px", "") - maxH) / 2;
+  $(".d3_position").style.top = `${y}px`;
+  // pre.style.top = `${maxH}px`;
+  // next.style.top = `${maxH}px`;
+}
+
+let yy = 0;
+
+// 3D轉圈
+function turn(e) {
+  if (this.id == "pre") {
+    yy -= 90;
+  } else {
+    yy += 90;
+  }
+  console.log(e);
+  $(".middle_3d").style.transform = `rotateY(${yy}deg)`;
+  e.stopPropagation();
+}
+
+
+// 關閉燈箱
+const d3_displayNone = () => {
+  pic_3d.value.style.visibility = "hidden";
+  pic_3d.value.style.zIndex = "-10";
+};
+
+// 打開燈箱
+const open = () => {
+  pic_3d.value.style.visibility = "visible";
+  pic_3d.value.style.zIndex = "10";
+};
+
+// wResize();
+// window.addEventListener("load", function () {
+//   reY();
+//   window.addEventListener("resize", wResize, false);
+//   window.addEventListener("resize", reY, false);
+
+//   next.addEventListener("click", turn, false);
+//   pre.addEventListener("click", turn, false);
+
+//   for (let i = 0; i < $All(".pic img").length; i++) {
+//     $All(".pic img")[i].addEventListener("click", function () {
+//       $(".pic_3d").style.visibility = "visible";
+//       $(".pic_3d").style.zIndex = "10";
+//     }, false);
+
+//   }
+//   $(".close_3d").addEventListener("click", wResize, false);
+//   $(".close_3d").addEventListener("click", d3_displayNone, false);
+//   $(".pic_3d").addEventListener("click", d3_displayNone, false);
+//   for (let i = 0; i < $All(".inner_3d>img").length; i++) {
+//     $All(".inner_3d>img")[0].addEventListener("click", nothing, false);
+//   }
+// }, false);
+
+</script>
+
 <style lang="scss" scoped>
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css");
-
-a[href="/Course"] {
-  border-radius: 0.25em;
-  background-color: #1a388c30;
-}
 
 .course {
   background-color: var(--course_color);
@@ -266,8 +342,9 @@ a[href="/Course"] {
   display: flex;
   flex-direction: column;
 }
+
 .pic {
-  > img {
+  >img {
     width: 100%;
     cursor: pointer;
     box-shadow: 2px 2px 2px 0px #000c;
@@ -450,6 +527,7 @@ a[href="/Course"] {
     h2 {
       font-size: 1.5rem;
     }
+
     :not(h2) {
       font-size: 1.25rem;
     }
