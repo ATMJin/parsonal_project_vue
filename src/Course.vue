@@ -218,21 +218,12 @@
         <!-- </div> -->
       </div>
       <aside class="pic_3d" @click.self="d3_displayNone" ref="pic_3d">
-        <div class="d3_position">
+        <div class="d3_position" ref="d3_position">
           <button id="pre"><i class="bi bi-chevron-compact-left"></i></button>
-          <div class="out_3d">
+          <div class="out_3d" ref="out_3d">
             <div class="middle_3d">
-              <div style="--i: 0" class="inner_3d">
-                <img src="./assets/img/course_01.jpg" alt="" />
-              </div>
-              <div style="--i: 1" class="inner_3d">
-                <img src="./assets/img/course_02.jpg" alt="" />
-              </div>
-              <div style="--i: 2" class="inner_3d">
-                <img src="./assets/img/course_03.jpg" alt="" />
-              </div>
-              <div style="--i: 3" class="inner_3d">
-                <img src="./assets/img/course_04.jpg" alt="" />
+              <div v-for="i in 4" :key="i" :style="`--i: ${i - 1}`" class="inner_3d" ref="inner_3d">
+                <img :src="`./src/assets/img/course_0${i}.jpg`" ref="inner_3d_img" alt="" />
               </div>
             </div>
           </div>
