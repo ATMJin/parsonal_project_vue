@@ -3,31 +3,29 @@
     <section class="course">
       <div class="container">
         <div class="row">
-          <div class="col_12 col_md_4 col_xl_3">
+          <div class="col_12 col_md_4 col_xl_3" v-for="course in courses" :key="course.name">
             <div class="card">
               <div class="pic">
-                <img src="./assets/img/course_01.jpg" @click="open" />
+                <img :src="course.image[0]" @click="open" />
               </div>
               <div class="text">
                 <div>
-                  <h2>蠟染</h2>
+                  <h2>{{ course.name }}</h2>
                   <div class="course_info">
                     <div class="course_people">
-                      開課人數: <span>10</span> 人
+                      開課人數: <span>{{ course.people }}</span> 人
                     </div>
-                    <div class="course_item">自備器材: <span>否</span></div>
+                    <div class="course_item">自備器材: <span>{{ course.item ? "是" : "否" }}</span></div>
                   </div>
                   <div class="course_introduce">
-                    <p>
-                      可以隨心所欲地繪製想要的圖案。
-                      我們有提供相關材料，您只需要攜帶畫筆和一顆想要創作的心前來就可以了。
-                    </p>
+                    <p>{{ course.introduce }}</p>
                   </div>
                 </div>
                 <div>
-                  <div class="for_beginner"><span>初學者推薦課程</span></div>
+                  <div :class="course.beginner ? 'for_beginner' : 'not_beginner'"><span
+                      v-show="course.beginner">初學者推薦課程</span></div>
                   <div class="course_money">
-                    <span>課程費用: </span><span>1200</span><span>元</span>
+                    <span>課程費用: </span><span>{{ course.price }}</span><span>元</span>
                   </div>
                   <div class="about_others">
                     <a href="masterpiece_page.html">
@@ -36,180 +34,8 @@
                   </div>
                 </div>
               </div>
-              <div class="out_ribbon">
+              <div class="out_ribbon" v-if="course.ribbon">
                 <div class="ribbon"></div>
-              </div>
-            </div>
-          </div>
-          <div class="col_12 col_md_4 col_xl_3">
-            <div class="card">
-              <div class="pic">
-                <img src="./assets/img/course_02.jpg" />
-              </div>
-              <div class="text">
-                <div>
-                  <h2>卷上絞技巧</h2>
-                  <div class="course_info">
-                    <div class="course_people">
-                      開課人數: <span>10</span> 人
-                    </div>
-                    <div class="course_item">自備器材: <span>否</span></div>
-                  </div>
-                  <div class="course_introduce">
-                    <p>
-                      纏繞纏繞纏繞，然後絞緊。
-                      利用繩線與布料產生的皺褶，能產生相當獨特的花紋。
-                    </p>
-                  </div>
-                </div>
-                <div>
-                  <div class="not_beginner"><span> </span></div>
-                  <div class="course_money">
-                    <span>課程費用: </span><span>1200</span><span>元</span>
-                  </div>
-                  <div class="about_others">
-                    <a href="masterpiece_page.html">
-                      <i class="bi bi-arrow-left"></i><span>相關作品</span>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col_12 col_md_4 col_xl_3">
-            <div class="card">
-              <div class="pic">
-                <img src="./assets/img/course_03.jpg" />
-              </div>
-              <div class="text">
-                <div>
-                  <h2>軍隊縫</h2>
-                  <div class="course_info">
-                    <div class="course_people">
-                      開課人數: <span>10</span> 人
-                    </div>
-                    <div class="course_item">自備器材: <span>否</span></div>
-                  </div>
-                  <div class="course_introduce">
-                    <p>
-                      如軍隊般整整齊齊地縫製。
-                      整齊的縫製紋與由細小紋路形成的圖案是其特點。
-                    </p>
-                  </div>
-                </div>
-                <div>
-                  <div class="not_beginner"><span> </span></div>
-                  <div class="course_money">
-                    <span>課程費用: </span><span>1200</span><span>元</span>
-                  </div>
-                  <div class="about_others">
-                    <a href="masterpiece_page.html">
-                      <i class="bi bi-arrow-left"></i><span>相關作品</span>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col_12 col_md_4 col_xl_3">
-            <div class="card">
-              <div class="pic">
-                <img src="./assets/img/course_04.jpg" />
-              </div>
-              <div class="text">
-                <div>
-                  <h2>帽子絞</h2>
-                  <div class="course_info">
-                    <div class="course_people">
-                      開課人數: <span>10</span> 人
-                    </div>
-                    <div class="course_item">自備器材: <span>否</span></div>
-                  </div>
-                  <div class="course_introduce">
-                    <p>
-                      想要製作一頂專屬於自己的帽子嗎?
-                      帽子絞技法可以讓您走在路上時成為眾人注目的焦點。
-                    </p>
-                  </div>
-                </div>
-                <div>
-                  <div class="not_beginner"><span> </span></div>
-                  <div class="course_money">
-                    <span>課程費用: </span><span>1200</span><span>元</span>
-                  </div>
-                  <div class="about_others">
-                    <a href="masterpiece_page.html">
-                      <i class="bi bi-arrow-left"></i><span>相關作品</span>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col_12 col_md_4 col_xl_3">
-            <div class="card">
-              <div class="pic">
-                <img src="./assets/img/course_05.jpg" />
-              </div>
-              <div class="text">
-                <div>
-                  <h2>日出絞</h2>
-                  <div class="course_info">
-                    <div class="course_people">
-                      開課人數: <span>10</span> 人
-                    </div>
-                    <div class="course_item">自備器材: <span>否</span></div>
-                  </div>
-                  <div class="course_introduce">
-                    <p>如旭日東昇般的紋路。 適合創作廣闊意象的創作。</p>
-                  </div>
-                </div>
-                <div>
-                  <div class="not_beginner"><span> </span></div>
-                  <div class="course_money">
-                    <span>課程費用: </span><span>1200</span><span>元</span>
-                  </div>
-                  <div class="about_others">
-                    <a href="masterpiece_page.html">
-                      <i class="bi bi-arrow-left"></i><span>相關作品</span>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col_12 col_md_4 col_xl_3">
-            <div class="card">
-              <div class="pic">
-                <img src="./assets/img/course_06.jpg" />
-              </div>
-              <div class="text">
-                <div>
-                  <h2>水管紋</h2>
-                  <div class="course_info">
-                    <div class="course_people">
-                      開課人數: <span>10</span> 人
-                    </div>
-                    <div class="course_item">自備器材: <span>否</span></div>
-                  </div>
-                  <div class="course_introduce">
-                    <p>
-                      讓您家的水管除了打小孩外還能有其他用途。
-                      平行、螺旋、交錯，在拆線前不知道會產生什麼圖案。
-                    </p>
-                  </div>
-                </div>
-                <div>
-                  <div class="not_beginner"><span> </span></div>
-                  <div class="course_money">
-                    <span>課程費用: </span><span>1200</span><span>元</span>
-                  </div>
-                  <div class="about_others">
-                    <a href="masterpiece_page.html">
-                      <i class="bi bi-arrow-left"></i><span>相關作品</span>
-                    </a>
-                  </div>
-                </div>
               </div>
             </div>
           </div>
@@ -238,6 +64,19 @@
 <script setup>
 import { ref, onMounted } from 'vue';
 const pic_3d = ref(null);
+const out_3d = ref(null);
+const inner_3d = ref(null);
+const inner_3d_img = ref(null);
+const d3_position = ref(null);
+let courses = ref([]);
+
+fetch("./src/assets/data/data.json")
+  .then(res => res.json())
+  .then(data => {
+    courses.value = data.course;
+  })
+  .catch(err => console.log(err))
+  .finally(() => { });
 
 // 調整3D燈箱寬度
 function wResize() {

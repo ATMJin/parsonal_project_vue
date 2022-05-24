@@ -2,80 +2,86 @@
   "course": [{
     "name": "蠟染",
     "image": [
-      "./assets/img/course_01.jpg",
-      "./assets/img/course_02.jpg",
-      "./assets/img/course_03.jpg",
-      "./assets/img/course_04.jpg"
+      "./src/assets/img/course_01.jpg",
+      "./src/assets/img/course_02.jpg",
+      "./src/assets/img/course_03.jpg",
+      "./src/assets/img/course_04.jpg"
     ],
     "people": 10,
     "item": false,
     "introduce": "可以隨心所欲地繪製想要的圖案。\n我們有提供相關材料，您只需要攜帶畫筆和一顆想要創作的心前來就可以了。",
     "beginner": true,
+    "ribbon": true,
     "price": 1200
   }, {
     "name": "卷上絞技巧",
     "image": [
-      "./assets/img/course_02.jpg",
-      "./assets/img/course_02.jpg",
-      "./assets/img/course_03.jpg",
-      "./assets/img/course_04.jpg"
+      "./src/assets/img/course_02.jpg",
+      "./src/assets/img/course_02.jpg",
+      "./src/assets/img/course_03.jpg",
+      "./src/assets/img/course_04.jpg"
     ],
     "people": 10,
     "item": false,
     "introduce": "纏繞纏繞纏繞，然後絞緊。\n利用繩線與布料產生的皺褶，能產生相當獨特的花紋。",
     "beginner": false,
+    "ribbon": false,
     "price": 1200
   }, {
     "name": "軍隊縫",
     "image": [
-      "./assets/img/course_03.jpg",
-      "./assets/img/course_02.jpg",
-      "./assets/img/course_03.jpg",
-      "./assets/img/course_04.jpg"
+      "./src/assets/img/course_03.jpg",
+      "./src/assets/img/course_02.jpg",
+      "./src/assets/img/course_03.jpg",
+      "./src/assets/img/course_04.jpg"
     ],
     "people": 10,
     "item": false,
     "introduce": "如軍隊般整整齊齊地縫製。\n整齊的縫製紋與由細小紋路形成的圖案是其特點。",
     "beginner": false,
+    "ribbon": false,
     "price": 1200
   }, {
     "name": "帽子絞",
     "image": [
-      "./assets/img/course_04.jpg",
-      "./assets/img/course_02.jpg",
-      "./assets/img/course_03.jpg",
-      "./assets/img/course_04.jpg"
+      "./src/assets/img/course_04.jpg",
+      "./src/assets/img/course_02.jpg",
+      "./src/assets/img/course_03.jpg",
+      "./src/assets/img/course_04.jpg"
     ],
     "people": 10,
     "item": false,
     "introduce": "想要製作一頂專屬於自己的帽子嗎?\n帽子絞技法可以讓您走在路上時成為眾人注目的焦點。",
     "beginner": false,
+    "ribbon": false,
     "price": 1200
   }, {
     "name": "日出絞",
     "image": [
-      "./assets/img/course_05.jpg",
-      "./assets/img/course_02.jpg",
-      "./assets/img/course_03.jpg",
-      "./assets/img/course_04.jpg"
+      "./src/assets/img/course_05.jpg",
+      "./src/assets/img/course_02.jpg",
+      "./src/assets/img/course_03.jpg",
+      "./src/assets/img/course_04.jpg"
     ],
     "people": 10,
     "item": false,
-    "introduce": "如旭日東昇般的紋路。 適合創作廣闊意象的創作。",
+    "introduce": "如旭日東昇般的紋路。\n適合創作廣闊意象的創作。",
     "beginner": false,
+    "ribbon": false,
     "price": 1200
   }, {
     "name": "水管紋",
     "image": [
-      "./assets/img/course_06.jpg",
-      "./assets/img/course_02.jpg",
-      "./assets/img/course_03.jpg",
-      "./assets/img/course_04.jpg"
+      "./src/assets/img/course_06.jpg",
+      "./src/assets/img/course_02.jpg",
+      "./src/assets/img/course_03.jpg",
+      "./src/assets/img/course_04.jpg"
     ],
     "people": 10,
     "item": false,
-    "introduce": "讓您家的水管除了打小孩外還能有其他用途。\n平行、 螺旋、 交錯， 在拆線前不知道會產生什麼圖案。",
+    "introduce": "讓您家的水管除了打小孩外還能有其他用途。\n平行、螺旋、交錯，在拆線前不知道會產生什麼圖案。",
     "beginner": false,
+    "ribbon": false,
     "price": 1200
   }],
   "masterpiece": [{
