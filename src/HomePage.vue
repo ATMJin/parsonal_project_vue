@@ -121,7 +121,7 @@
 <script>
 export default {};
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
 section {
   position: relative;
   width: 90%;
@@ -135,12 +135,10 @@ section {
   --upper_petal: path("M 50,136.6 L 0,50 A 50,50 0,0,1 100,50 L 50,136.6 z");
   --down_petal: path("M 50,0 L 0,86.6 A 50,50 0,0,0 100,86.6 L 50,0 z");
   /* 花瓣路徑，1.5倍 */
-  --upper_petal_bigger: path(
-    "M 75,204.9 L 0,75 A 75,75 0,0,1 150,75 L 75,204.9 z"
-  );
-  --down_petal_bigger: path(
-    "M 75,0 L 0,129.9 A 75,75 0,0,0 150,129.9 L 75,0 z"
-  );
+  --upper_petal_bigger: path("M 75,204.9 L 0,75 A 75,75 0,0,1 150,75 L 75,204.9 z"
+    );
+  --down_petal_bigger: path("M 75,0 L 0,129.9 A 75,75 0,0,0 150,129.9 L 75,0 z"
+    );
 }
 
 h2 {
@@ -162,11 +160,11 @@ p {
   text-shadow: 1px 1px 2px darkblue;
 }
 
-.more > a {
+.more>a {
   color: #fed857;
 }
 
-.more > a:visited {
+.more>a:visited {
   color: #fed857;
 }
 
@@ -177,7 +175,7 @@ p {
   overflow: hidden;
 }
 
-.introduce_of_course > h2 {
+.introduce_of_course>h2 {
   line-height: 3em;
 }
 
@@ -193,7 +191,7 @@ p {
 }
 
 /* 佔位用圖片 */
-.course_image.nothing > .nothing {
+.course_image.nothing>.nothing {
   width: 100%;
   opacity: 0;
 }
@@ -223,7 +221,7 @@ p {
   left: 2000px;
 }
 
-.course_image.carousel > img {
+.course_image.carousel>img {
   width: 100%;
 }
 
@@ -251,7 +249,7 @@ p {
   left: -40px;
 }
 
-.pre_pic > i {
+.pre_pic>i {
   position: relative;
   left: -5px;
 }
@@ -260,7 +258,7 @@ p {
   right: -40px;
 }
 
-.next_pic > i {
+.next_pic>i {
   position: relative;
   left: 5px;
 }
@@ -396,7 +394,7 @@ p {
   }
 }
 
-.big_flower > img:not(.circle_in_flower) {
+.big_flower>img:not(.circle_in_flower) {
   width: 100px;
   /*! height: 100px; */
   aspect-ratio: 2/3;
@@ -404,21 +402,21 @@ p {
   filter: brightness(40%);
 }
 
-.big_flower > img:not(.circle_in_flower).lighter {
+.big_flower>img:not(.circle_in_flower).lighter {
   filter: brightness(100%);
 }
 
-.big_flower > img:nth-child(even) {
+.big_flower>img:nth-child(even) {
   aspect-ratio: 1/1;
   width: 150px;
 }
 
-.big_flower > img:nth-child(4n + 1) {
+.big_flower>img:nth-child(4n + 1) {
   aspect-ratio: 3/2;
   width: 150px;
 }
 
-.big_flower > img:first-child {
+.big_flower>img:first-child {
   grid-column: 2/5;
   grid-row: 2/5;
   width: 300px;
@@ -490,19 +488,19 @@ p {
     width: 900px;
   }
 
-  .big_flower > img:not(.circle_in_flower) {
+  .big_flower>img:not(.circle_in_flower) {
     width: 150px;
   }
 
-  .big_flower > img:nth-child(even) {
+  .big_flower>img:nth-child(even) {
     width: 225px;
   }
 
-  .big_flower > img:nth-child(4n + 1) {
+  .big_flower>img:nth-child(4n + 1) {
     width: 225px;
   }
 
-  .big_flower > img:first-child {
+  .big_flower>img:first-child {
     width: 450px;
   }
 
@@ -594,18 +592,18 @@ p {
   margin: auto;
 }
 
-.flower_roulette > img {
+.flower_roulette>img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   filter: brightness(40%);
 }
 
-.flower_roulette > img.lighter {
+.flower_roulette>img.lighter {
   filter: brightness(100%);
 }
 
-.flower_roulette > img:nth-child(1) {
+.flower_roulette>img:nth-child(1) {
   grid-column: 1;
   grid-row: 1;
   clip-path: var(--upper_petal);
@@ -613,13 +611,13 @@ p {
   transform-origin: center 136.6px;
 }
 
-.flower_roulette > img:nth-child(2) {
+.flower_roulette>img:nth-child(2) {
   grid-column: 2;
   grid-row: 1;
   clip-path: var(--upper_petal);
 }
 
-.flower_roulette > img:nth-child(3) {
+.flower_roulette>img:nth-child(3) {
   grid-column: 3;
   grid-row: 1;
   clip-path: var(--upper_petal);
@@ -627,7 +625,7 @@ p {
   transform-origin: center 136.6px;
 }
 
-.flower_roulette > img:nth-child(4) {
+.flower_roulette>img:nth-child(4) {
   grid-column: 3;
   grid-row: 2;
   clip-path: var(--down_petal);
@@ -635,13 +633,13 @@ p {
   transform-origin: top center;
 }
 
-.flower_roulette > img:nth-child(5) {
+.flower_roulette>img:nth-child(5) {
   grid-column: 2;
   grid-row: 2;
   clip-path: var(--down_petal);
 }
 
-.flower_roulette > img:nth-child(6) {
+.flower_roulette>img:nth-child(6) {
   grid-column: 1;
   grid-row: 2;
   clip-path: var(--down_petal);
@@ -654,33 +652,33 @@ p {
     height: 450px;
   }
 
-  .flower_roulette > img:nth-child(1) {
+  .flower_roulette>img:nth-child(1) {
     clip-path: var(--upper_petal_bigger);
     transform: translate(124.5px) rotate(-60deg);
     transform-origin: center 204.9px;
   }
 
-  .flower_roulette > img:nth-child(2) {
+  .flower_roulette>img:nth-child(2) {
     clip-path: var(--upper_petal_bigger);
   }
 
-  .flower_roulette > img:nth-child(3) {
+  .flower_roulette>img:nth-child(3) {
     clip-path: var(--upper_petal_bigger);
     transform: translate(-124.5px) rotate(60deg);
     transform-origin: center 204.9px;
   }
 
-  .flower_roulette > img:nth-child(4) {
+  .flower_roulette>img:nth-child(4) {
     clip-path: var(--down_petal_bigger);
     transform: translate(-124.5px) rotate(-60deg);
     transform-origin: top center;
   }
 
-  .flower_roulette > img:nth-child(5) {
+  .flower_roulette>img:nth-child(5) {
     clip-path: var(--down_petal_bigger);
   }
 
-  .flower_roulette > img:nth-child(6) {
+  .flower_roulette>img:nth-child(6) {
     clip-path: var(--down_petal_bigger);
     transform: translate(124.5px) rotate(60deg);
     transform-origin: top center;
@@ -725,7 +723,7 @@ p {
     height: 500px; */
   }
 
-  .skill_pic_and_intro_and_roulette > div:first-child {
+  .skill_pic_and_intro_and_roulette>div:first-child {
     margin-right: 10px;
   }
 
@@ -984,23 +982,23 @@ p {
   /* animation-delay: 3s; */
 }
 
-.cos_f:nth-child(1) > .flower_animation_small_flower {
+.cos_f:nth-child(1)>.flower_animation_small_flower {
   animation-duration: 1s;
 }
 
-.cos_f:nth-child(2) > .flower_animation_small_flower {
+.cos_f:nth-child(2)>.flower_animation_small_flower {
   animation-duration: 2s;
 }
 
-.cos_f:nth-child(3) > .flower_animation_small_flower {
+.cos_f:nth-child(3)>.flower_animation_small_flower {
   animation-duration: 3s;
 }
 
-.cos_f:nth-child(4) > .flower_animation_small_flower {
+.cos_f:nth-child(4)>.flower_animation_small_flower {
   animation-duration: 2.5s;
 }
 
-.cos_f:nth-child(5) > .flower_animation_small_flower {
+.cos_f:nth-child(5)>.flower_animation_small_flower {
   animation-duration: 1.5s;
 }
 

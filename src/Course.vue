@@ -45,17 +45,17 @@
       </div>
       <aside class="pic_3d" @click.self="d3_displayNone" ref="pic_3d">
         <div class="d3_position" ref="d3_position">
-          <button id="pre"><i class="bi bi-chevron-compact-left"></i></button>
+          <button id="pre" @click="turn(1)"><i class="bi bi-chevron-compact-left"></i></button>
           <div class="out_3d" ref="out_3d">
-            <div class="middle_3d">
+            <div class="middle_3d" ref="middle_3d">
               <div v-for="i in 4" :key="i" :style="`--i: ${i - 1}`" class="inner_3d" ref="inner_3d">
                 <img :src="`./src/assets/img/course_0${i}.jpg`" ref="inner_3d_img" alt="" />
               </div>
             </div>
           </div>
-          <button id="next"><i class="bi bi-chevron-compact-right"></i></button>
+          <button id="next" @click="turn(-1)"><i class="bi bi-chevron-compact-right"></i></button>
         </div>
-        <div class="close_3d" @click="d3_displayNone"></div>
+        <div class="close_3d" @click="d3_displayNone(); wResize()"></div>
       </aside>
     </section>
   </main>
@@ -66,6 +66,7 @@ import { ref, onMounted } from 'vue';
 const pic_3d = ref(null);
 const out_3d = ref(null);
 const inner_3d = ref(null);
+const middle_3d = ref(null);
 const inner_3d_img = ref(null);
 const d3_position = ref(null);
 let courses = ref([]);
@@ -75,52 +76,44 @@ fetch("./src/assets/data/data.json")
   .then(data => {
     courses.value = data.course;
   })
-  .catch(err => console.log(err))
-  .finally(() => { });
+  .catch(err => console.log(err));;
 
-// 調整3D燈箱寬度
-function wResize() {
-  let w = window.getComputedStyle($(".out_3d")).width;
+// 調整圖片距離，使圖片可以圍成圈
+const wResize = () => {
+  let w = window.getComputedStyle(out_3d.value).width;
   w = w.replace("px", "") / 2;
-  for (let i = 0; i < $All(".inner_3d").length; i++) {
-    $All(".inner_3d")[i].style.transform = `rotateY(calc(var(--i) * 90deg))translateZ(${w}px)`;
+  for (let i = 0; i < inner_3d.value.length; i++) {
+    inner_3d.value[i].style.transform = `rotateY(calc(var(--i) * 90deg))translateZ(${w}px)`;
   }
-}
+};
 
-// 調整圖片高度
-function reY() {
+// 調整圖片Y座標，使圖片位置差不多在視窗中間
+const reY = () => {
   let maxH = 0;
-  let img = $All(".inner_3d>img");
+  let img = inner_3d_img.value;
   for (let i = 0; i < img.length; i++) {
     let imgH = window.getComputedStyle(img[i]).height.replace("px", "");
     if (imgH > maxH) maxH = imgH;
   }
   let y = 0;
-  y = (window.getComputedStyle($(".pic_3d")).height.replace("px", "") - maxH) / 2;
-  $(".d3_position").style.top = `${y}px`;
+  y = (window.getComputedStyle(pic_3d.value).height.replace("px", "") - maxH) / 2;
+  d3_position.value.style.top = `${y}px`;
   // pre.style.top = `${maxH}px`;
   // next.style.top = `${maxH}px`;
-}
-
-let yy = 0;
+};
 
 // 3D轉圈
-function turn(e) {
-  if (this.id == "pre") {
-    yy -= 90;
-  } else {
-    yy += 90;
-  }
-  console.log(e);
-  $(".middle_3d").style.transform = `rotateY(${yy}deg)`;
-  e.stopPropagation();
-}
-
+let yy = 0;
+const turn = (i) => {
+  console.log("turn");
+  yy += 90 * i;
+  middle_3d.value.style.transform = `rotateY(${yy}deg)`;
+};
 
 // 關閉燈箱
 const d3_displayNone = () => {
-  pic_3d.value.style.visibility = "hidden";
   pic_3d.value.style.zIndex = "-10";
+  pic_3d.value.style.visibility = "hidden";
 };
 
 // 打開燈箱
@@ -129,29 +122,16 @@ const open = () => {
   pic_3d.value.style.zIndex = "10";
 };
 
-// wResize();
-// window.addEventListener("load", function () {
-//   reY();
-//   window.addEventListener("resize", wResize, false);
-//   window.addEventListener("resize", reY, false);
-
-//   next.addEventListener("click", turn, false);
-//   pre.addEventListener("click", turn, false);
-
-//   for (let i = 0; i < $All(".pic img").length; i++) {
-//     $All(".pic img")[i].addEventListener("click", function () {
-//       $(".pic_3d").style.visibility = "visible";
-//       $(".pic_3d").style.zIndex = "10";
-//     }, false);
-
-//   }
-//   $(".close_3d").addEventListener("click", wResize, false);
-//   $(".close_3d").addEventListener("click", d3_displayNone, false);
-//   $(".pic_3d").addEventListener("click", d3_displayNone, false);
-//   for (let i = 0; i < $All(".inner_3d>img").length; i++) {
-//     $All(".inner_3d>img")[0].addEventListener("click", nothing, false);
-//   }
-// }, false);
+onMounted(() => {
+  window.addEventListener("load", () => {
+    wResize();
+    reY();
+  }, false);
+  window.addEventListener("resize", () => {
+    wResize();
+    reY();
+  }, false);
+});
 
 </script>
 

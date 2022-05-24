@@ -120,7 +120,7 @@ import BackgroundFlower from "./components/BackgroundFlower.vue";
   </main>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 body {
   font-size: 1.5rem;
 }
