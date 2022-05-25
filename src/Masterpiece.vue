@@ -5,274 +5,78 @@
       <!-- 小圖 -->
       <div class="cover_min_pic">
         <div class="min_pic">
-          <div class="pic">
-            <img
-              src="./assets/img/min/masterpiece_01.jpg"
-              alt=""
-              data-picIndex="01"
-              data-picName="masterpiece_01"
-            />
-          </div>
-          <div class="pic">
-            <img
-              src="./assets/img/min/masterpiece_02.jpg"
-              alt=""
-              data-picIndex="02"
-              data-picName="masterpiece_02"
-            />
-          </div>
-          <div class="pic">
-            <img
-              src="./assets/img/min/masterpiece_03.jpg"
-              alt=""
-              data-picIndex="03"
-              data-picName="masterpiece_03"
-            />
-          </div>
-          <div class="pic">
-            <img
-              src="./assets/img/min/masterpiece_04.jpg"
-              alt=""
-              data-picIndex="04"
-              data-picName="masterpiece_04"
-            />
-          </div>
-          <div class="pic">
-            <img
-              src="./assets/img/min/masterpiece_05.jpg"
-              alt=""
-              data-picIndex="05"
-              data-picName="masterpiece_05"
-            />
-          </div>
-          <div class="pic">
-            <img
-              src="./assets/img/min/masterpiece_06.jpg"
-              alt=""
-              data-picIndex="06"
-              data-picName="masterpiece_06"
-            />
-          </div>
-          <div class="pic">
-            <img
-              src="./assets/img/min/masterpiece_07.jpg"
-              alt=""
-              data-picIndex="07"
-              data-picName="masterpiece_07"
-            />
-          </div>
-          <div class="pic">
-            <img
-              src="./assets/img/min/masterpiece_08.jpg"
-              alt=""
-              data-picIndex="08"
-              data-picName="masterpiece_08"
-            />
-          </div>
-          <div class="pic">
-            <img
-              src="./assets/img/min/masterpiece_09.jpg"
-              alt=""
-              data-picIndex="09"
-              data-picName="masterpiece_09"
-            />
-          </div>
-          <div class="pic">
-            <img
-              src="./assets/img/min/masterpiece_10.jpg"
-              alt=""
-              data-picIndex="10"
-              data-picName="masterpiece_10"
-            />
-          </div>
-          <div class="pic">
-            <img
-              src="./assets/img/min/masterpiece_11.jpg"
-              alt=""
-              data-picIndex="11"
-              data-picName="masterpiece_11"
-            />
-          </div>
-          <div class="pic">
-            <img
-              src="./assets/img/min/masterpiece_12.jpg"
-              alt=""
-              data-picIndex="12"
-              data-picName="masterpiece_12"
-            />
-          </div>
-          <div class="pic">
-            <img
-              src="./assets/img/min/masterpiece_13.jpg"
-              alt=""
-              data-picIndex="13"
-              data-picName="masterpiece_13"
-            />
-          </div>
-          <div class="pic">
-            <img
-              src="./assets/img/min/masterpiece_14.jpg"
-              alt=""
-              data-picIndex="14"
-              data-picName="masterpiece_14"
-            />
-          </div>
-          <div class="pic">
-            <img
-              src="./assets/img/min/masterpiece_15.jpg"
-              alt=""
-              data-picIndex="15"
-              data-picName="masterpiece_15"
-            />
-          </div>
-          <div class="pic">
-            <img
-              src="./assets/img/min/masterpiece_16.jpg"
-              alt=""
-              data-picIndex="16"
-              data-picName="masterpiece_16"
-            />
-          </div>
-          <div class="pic">
-            <img
-              src="./assets/img/min/masterpiece_17.jpg"
-              alt=""
-              data-picIndex="17"
-              data-picName="masterpiece_17"
-            />
-          </div>
-          <div class="pic">
-            <img
-              src="./assets/img/min/masterpiece_18.jpg"
-              alt=""
-              data-picIndex="18"
-              data-picName="masterpiece_18"
-            />
-          </div>
-          <div class="pic">
-            <img
-              src="./assets/img/min/masterpiece_19.jpg"
-              alt=""
-              data-picIndex="19"
-              data-picName="masterpiece_19"
-            />
-          </div>
-          <div class="pic">
-            <img
-              src="./assets/img/min/masterpiece_20.jpg"
-              alt=""
-              data-picIndex="20"
-              data-picName="masterpiece_20"
-            />
+          <div class="pic" v-for="(masterpiece, i) in masterpieces" :key="masterpiece.name">
+            <img :src="`./src/assets/img/min/${masterpiece.image}`" :alt="masterpiece.alt" :data-picIndex="i"
+              :data-picName="masterpiece.name" @click="changeCard($event)" />
           </div>
         </div>
       </div>
       <div class="beside_min_pics">
         <!-- 大圖和介紹文字 -->
         <div class="card">
-          <div class="pic show">
-            <img src="./assets/img/masterpiece_01.jpg" />
+
+          <div :class="['pic', { 'show': show, 'hidden': !show }]">
+            <img :src="show ? piccard.src : tempcard.src" />
           </div>
-          <div class="pic hidden">
-            <img src="./assets/img/masterpiece_01.jpg" />
+          <div :class="['pic', { 'show': !show, 'hidden': show }]">
+            <img :src="!show ? piccard.src : tempcard.src" />
           </div>
-          <div class="text show">
-            <h2>小狐狸</h2>
-            <p>
-              在處理好的布上描繪線稿後，以一針一線仔細沿著畫好的輪廓遊走。當最後都縫製好時，用力拉扯預留的線頭，使布料緊密地重疊在一起。
-            </p>
-            <p>
-              緊密重疊的部分染料不易滲透，便呈現較淺的白色，其餘部分則呈現染料的顏色。
-            </p>
+
+          <div :class="['text', { 'show': show, 'hidden': !show }]">
+            <h2>{{ show ? piccard.name : tempcard.name }}</h2>
+            <p v-for="(text, i) in show ? piccard.intro : tempcard.intro" :key="i">{{ text }}</p>
           </div>
-          <div class="text hidden">
-            <h2>小狐狸</h2>
-            <p>
-              在處理好的布上描繪線稿後，以一針一線仔細沿著畫好的輪廓遊走。當最後都縫製好時，用力拉扯預留的線頭，使布料緊密地重疊在一起。
-            </p>
-            <p>
-              緊密重疊的部分染料不易滲透，便呈現較淺的白色，其餘部分則呈現染料的顏色。
-            </p>
+          <div :class="['text', { 'show': !show, 'hidden': show }]">
+            <h2>{{ !show ? piccard.name : tempcard.name }}</h2>
+            <p v-for="(text, i) in !show ? piccard.intro : tempcard.intro" :key="i">{{ text }}</p>
           </div>
         </div>
         <!-- 可以連結到課程的區塊 -->
         <aside class="cover_you_know">
-          <div class="you_know show">
+          <div :class="['you_know', { 'show': show, 'hidden': !show }]">
             <h3>你知道嗎?</h3>
             <p>
-              這件作品是用<span class="skill_name">縫染</span>的技法製作而成的
+              這件作品是用<span class="skill_name">{{ show ? piccard.skill : tempcard.skill }}</span>的技法製作而成的
             </p>
             <div class="link_to_other">
               <a href="course_page.html">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  fill="currentColor"
-                  class="bi bi-chevron-left"
-                  viewBox="0 0 16 16"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"
-                  />
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                  class="bi bi-chevron-left" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd"
+                    d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z" />
                 </svg>
                 查詢相關課程
               </a>
               <a href="skill_page.html">
                 查詢相關技法
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  fill="currentColor"
-                  class="bi bi-chevron-right"
-                  viewBox="0 0 16 16"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"
-                  />
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                  class="bi bi-chevron-right" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd"
+                    d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
                 </svg>
               </a>
             </div>
           </div>
-          <div class="you_know hidden">
+          <div :class="['you_know', { 'show': !show, 'hidden': show }]">
             <h3>你知道嗎?</h3>
             <p>
-              這件作品是用<span class="skill_name">縫染</span>的技法製作而成的
+              這件作品是用<span class="skill_name">{{ !show ? piccard.skill : tempcard.skill }}</span>的技法製作而成的
             </p>
             <div class="link_to_other">
               <a href="course_page.html">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  fill="currentColor"
-                  class="bi bi-chevron-left"
-                  viewBox="0 0 16 16"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"
-                  />
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                  class="bi bi-chevron-left" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd"
+                    d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z" />
                 </svg>
                 查詢相關課程
               </a>
               <a href="skill_page.html">
                 查詢相關技法
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  fill="currentColor"
-                  class="bi bi-chevron-right"
-                  viewBox="0 0 16 16"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"
-                  />
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                  class="bi bi-chevron-right" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd"
+                    d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
                 </svg>
               </a>
             </div>
@@ -283,12 +87,115 @@
   </main>
 </template>
 
-<style lang="scss" scoped>
-a[href="masterpiece_page.html"] {
-  border-radius: 0.25em;
-  background-color: #1a388c30;
+<script setup>
+import { ref, onMounted } from 'vue';
+let masterpieces = ref([]);
+let piccard = ref({
+  name: "",
+  src: "./src/assets/img/masterpiece_01.jpg",
+  alt: "",
+  intro: [],
+  skill: ""
+});
+let tempcard = ref({
+  name: "",
+  src: "./src/assets/img/masterpiece_01.jpg",
+  alt: "",
+  intro: [],
+  skill: ""
+});
+
+fetch("./src/assets/data/data.json")
+  .then(res => res.json())
+  .then(data => {
+    masterpieces.value = data.masterpiece;
+    piccard.value.src = `./src/assets/img/${masterpieces.value[0].image}`;
+    piccard.value.alt = masterpieces.value[0].alt;
+    piccard.value.name = masterpieces.value[0].name;
+    piccard.value.intro = masterpieces.value[0].introduce;
+    piccard.value.skill = masterpieces.value[0].skill;
+    tempcard.value = { ...piccard.value };
+  })
+  .catch(err => console.log(err));
+
+
+
+
+let min_pics = document.getElementsByClassName("min_pic")[0];
+let x = 5;
+let y = 0;
+
+//橫向自動卷軸
+function min_pic_scroll_X() {
+  min_pics.scrollLeft += x;
+  if (min_pics.scrollLeft >= min_pics.scrollLeftMax - x) x = -x;
+  else if (min_pics.scrollLeft <= -x) x = -x;
+  //到底反轉
+  //TODO 無限輪播
+}
+//直向自動卷軸
+function min_pic_scroll_Y() {
+  min_pics.scrollTop += y;
+  if (min_pics.scrollTop >= min_pics.scrollTopMax - y) y = -y;
+  else if (min_pics.scrollTop <= -y) {
+    y = -y;
+  }
 }
 
+
+let XY;
+//直向或橫向
+function X_or_Y() {
+  if (min_pics.scrollLeft != min_pics.scrollLeftMax) {
+    clearInterval(XY);
+    XY = setInterval(min_pic_scroll_X, 30);
+  } else {
+    clearInterval(XY);
+    XY = setInterval(min_pic_scroll_Y, 30);
+  }
+}
+//TODO 記得反註解
+// X_or_Y();
+
+
+
+let show = ref(true);
+//點小圖換切換右側資訊
+const changeCard = (e) => {
+  let picindex = e.target.dataset.picindex;
+
+  piccard.value.src = `./src/assets/img/${masterpieces.value[picindex].image}`;
+  piccard.value.alt = masterpieces.value[picindex].alt;
+  piccard.value.name = masterpieces.value[picindex].name;
+  piccard.value.intro = masterpieces.value[picindex].introduce;
+  piccard.value.skill = masterpieces.value[picindex].skill;
+  setTimeout(() => { tempcard.value = { ...piccard.value }; }, 1010);
+  // 資訊切換時的效果
+  // 切換class
+  show.value = !show.value;
+};
+
+
+
+let img = document.querySelectorAll(".min_pic .pic>img");
+
+function init() {
+  //滑鼠或觸控時停止或開啟輪播
+  min_pics.addEventListener("mousedown", () => clearInterval(XY), false);
+  min_pics.addEventListener("touchstart", () => clearInterval(XY), false);
+  min_pics.addEventListener("mouseup", X_or_Y, false);
+  min_pics.addEventListener("touchend", X_or_Y, false);
+  //小圖點擊更換圖文
+  for (let i = 0; i < img.length; i++) {
+    img[i].addEventListener("click", change_card, false);
+  }
+}
+
+// window.addEventListener("load", init, false);
+// window.addEventListener("resize", X_or_Y, false);
+</script>
+
+<style lang="scss" scoped>
 main {
   background-color: var(--masterpiece_color);
 }
@@ -319,13 +226,13 @@ main {
   display: none;
 }
 
-.min_pic > .pic {
+.min_pic>.pic {
   margin: 5px;
   flex-shrink: 0;
   cursor: pointer;
 }
 
-.pic > img {
+.pic>img {
   width: 100%;
 }
 
@@ -342,17 +249,17 @@ main {
   text-shadow: 1px 1px 2px #fff3;
 }
 
-.card > .pic {
+.card>.pic {
   width: 100%;
 }
 
-.text > h2 {
+.text>h2 {
   font-size: 2rem;
   line-height: 2em;
   text-align: center;
 }
 
-.text > p {
+.text>p {
   font-weight: 400;
   line-height: 1.75em;
   text-indent: 1.2em;
@@ -469,7 +376,7 @@ main {
     height: 90vh;
   }
 
-  .min_pic > .pic {
+  .min_pic>.pic {
     margin: 10px;
   }
 

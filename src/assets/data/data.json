@@ -85,122 +85,122 @@
     "price": 1200
   }],
   "masterpiece": [{
-    "name": "masterpiece_01",
-    "src": "./src/assets/img/masterpiece_01.jpg",
+    "name": "小狐狸",
+    "image": "masterpiece_01.jpg",
     "alt": "小狐狸",
     "skill": "縫染",
     "introduce": ["在處理好的布上描繪線稿後，以一針一線仔細沿著畫好的輪廓遊走。當最後都縫製好時，用力拉扯預留的線頭，使布料緊密地重疊在一起。", "緊密重疊的部分染料不易滲透，便呈現較淺的白色，其餘部分則呈現染料的顏色。"]
   }, {
     "name": "masterpiece_02",
-    "src": "./src/assets/img/masterpiece_02.jpg",
+    "image": "masterpiece_02.jpg",
     "alt": "小狐狸",
     "skill": "蠟染",
     "introduce": ["在處理好的布上描繪線稿後，以一針一線仔細沿著畫好的輪廓遊走。當最後都縫製好時，用力拉扯預留的線頭，使布料緊密地重疊在一起。"]
   }, {
     "name": "masterpiece_03",
-    "src": "./src/assets/img/masterpiece_03.jpg",
+    "image": "masterpiece_03.jpg",
     "alt": "小狐狸",
     "skill": "不知道染",
     "introduce": ["在處理好的布上描繪線稿後，以一針一線仔細沿著畫好的輪廓遊走。當最後都縫製好時，用力拉扯預留的線頭，使布料緊密地重疊在一起。"]
   }, {
     "name": "masterpiece_04",
-    "src": "./src/assets/img/masterpiece_04.jpg",
+    "image": "masterpiece_04.jpg",
     "alt": "小狐狸",
     "skill": "不知道染",
     "introduce": ["在處理好的布上描繪線稿後，以一針一線仔細沿著畫好的輪廓遊走。當最後都縫製好時，用力拉扯預留的線頭，使布料緊密地重疊在一起。"]
   }, {
     "name": "masterpiece_05",
-    "src": "./src/assets/img/masterpiece_05.jpg",
+    "image": "masterpiece_05.jpg",
     "alt": "小狐狸",
     "skill": "不知道染",
     "introduce": ["在處理好的布上描繪線稿後，以一針一線仔細沿著畫好的輪廓遊走。當最後都縫製好時，用力拉扯預留的線頭，使布料緊密地重疊在一起。"]
   }, {
     "name": "masterpiece_06",
-    "src": "./src/assets/img/masterpiece_06.jpg",
+    "image": "masterpiece_06.jpg",
     "alt": "小狐狸",
     "skill": "縫染",
     "introduce": ["在處理好的布上描繪線稿後，以一針一線仔細沿著畫好的輪廓遊走。當最後都縫製好時，用力拉扯預留的線頭，使布料緊密地重疊在一起。", "緊密重疊的部分染料不易滲透，便呈現較淺的白色，其餘部分則呈現染料的顏色。"]
   }, {
     "name": "masterpiece_07",
-    "src": "./src/assets/img/masterpiece_07.jpg",
+    "image": "masterpiece_07.jpg",
     "alt": "小狐狸",
     "skill": "蠟染",
     "introduce": ["在處理好的布上描繪線稿後，以一針一線仔細沿著畫好的輪廓遊走。當最後都縫製好時，用力拉扯預留的線頭，使布料緊密地重疊在一起。"]
   }, {
     "name": "masterpiece_08",
-    "src": "./src/assets/img/masterpiece_08.jpg",
+    "image": "masterpiece_08.jpg",
     "alt": "小狐狸",
     "skill": "不知道染",
     "introduce": ["在處理好的布上描繪線稿後，以一針一線仔細沿著畫好的輪廓遊走。當最後都縫製好時，用力拉扯預留的線頭，使布料緊密地重疊在一起。"]
   }, {
     "name": "masterpiece_09",
-    "src": "./src/assets/img/masterpiece_09.jpg",
+    "image": "masterpiece_09.jpg",
     "alt": "小狐狸",
     "skill": "不知道染",
     "introduce": ["在處理好的布上描繪線稿後，以一針一線仔細沿著畫好的輪廓遊走。當最後都縫製好時，用力拉扯預留的線頭，使布料緊密地重疊在一起。"]
   }, {
     "name": "masterpiece_10",
-    "src": "./src/assets/img/masterpiece_10.jpg",
+    "image": "masterpiece_10.jpg",
     "alt": "小狐狸",
     "skill": "不知道染",
     "introduce": ["在處理好的布上描繪線稿後，以一針一線仔細沿著畫好的輪廓遊走。當最後都縫製好時，用力拉扯預留的線頭，使布料緊密地重疊在一起。"]
   }, {
     "name": "masterpiece_11",
-    "src": "./src/assets/img/masterpiece_11.jpg",
+    "image": "masterpiece_11.jpg",
     "alt": "小狐狸",
     "skill": "縫染",
     "introduce": ["在處理好的布上描繪線稿後，以一針一線仔細沿著畫好的輪廓遊走。當最後都縫製好時，用力拉扯預留的線頭，使布料緊密地重疊在一起。", "緊密重疊的部分染料不易滲透，便呈現較淺的白色，其餘部分則呈現染料的顏色。"]
   }, {
     "name": "masterpiece_12",
-    "src": "./src/assets/img/masterpiece_12.jpg",
+    "image": "masterpiece_12.jpg",
     "alt": "小狐狸",
     "skill": "蠟染",
     "introduce": ["在處理好的布上描繪線稿後，以一針一線仔細沿著畫好的輪廓遊走。當最後都縫製好時，用力拉扯預留的線頭，使布料緊密地重疊在一起。"]
   }, {
     "name": "masterpiece_13",
-    "src": "./src/assets/img/masterpiece_13.jpg",
+    "image": "masterpiece_13.jpg",
     "alt": "小狐狸",
     "skill": "不知道染",
     "introduce": ["在處理好的布上描繪線稿後，以一針一線仔細沿著畫好的輪廓遊走。當最後都縫製好時，用力拉扯預留的線頭，使布料緊密地重疊在一起。"]
   }, {
     "name": "masterpiece_14",
-    "src": "./src/assets/img/masterpiece_14.jpg",
+    "image": "masterpiece_14.jpg",
     "alt": "小狐狸",
     "skill": "不知道染",
     "introduce": ["在處理好的布上描繪線稿後，以一針一線仔細沿著畫好的輪廓遊走。當最後都縫製好時，用力拉扯預留的線頭，使布料緊密地重疊在一起。"]
   }, {
     "name": "masterpiece_15",
-    "src": "./src/assets/img/masterpiece_15.jpg",
+    "image": "masterpiece_15.jpg",
     "alt": "小狐狸",
     "skill": "不知道染",
     "introduce": ["在處理好的布上描繪線稿後，以一針一線仔細沿著畫好的輪廓遊走。當最後都縫製好時，用力拉扯預留的線頭，使布料緊密地重疊在一起。"]
   }, {
     "name": "masterpiece_16",
-    "src": "./src/assets/img/masterpiece_16.jpg",
+    "image": "masterpiece_16.jpg",
     "alt": "小狐狸",
     "skill": "縫染",
     "introduce": ["在處理好的布上描繪線稿後，以一針一線仔細沿著畫好的輪廓遊走。當最後都縫製好時，用力拉扯預留的線頭，使布料緊密地重疊在一起。", "緊密重疊的部分染料不易滲透，便呈現較淺的白色，其餘部分則呈現染料的顏色。"]
   }, {
     "name": "masterpiece_17",
-    "src": "./src/assets/img/masterpiece_17.jpg",
+    "image": "masterpiece_17.jpg",
     "alt": "小狐狸",
     "skill": "蠟染",
     "introduce": ["在處理好的布上描繪線稿後，以一針一線仔細沿著畫好的輪廓遊走。當最後都縫製好時，用力拉扯預留的線頭，使布料緊密地重疊在一起。"]
   }, {
     "name": "masterpiece_18",
-    "src": "./src/assets/img/masterpiece_18.jpg",
+    "image": "masterpiece_18.jpg",
     "alt": "小狐狸",
     "skill": "不知道染",
     "introduce": ["在處理好的布上描繪線稿後，以一針一線仔細沿著畫好的輪廓遊走。當最後都縫製好時，用力拉扯預留的線頭，使布料緊密地重疊在一起。"]
   }, {
     "name": "masterpiece_19",
-    "src": "./src/assets/img/masterpiece_19.jpg",
+    "image": "masterpiece_19.jpg",
     "alt": "小狐狸",
     "skill": "不知道染",
     "introduce": ["在處理好的布上描繪線稿後，以一針一線仔細沿著畫好的輪廓遊走。當最後都縫製好時，用力拉扯預留的線頭，使布料緊密地重疊在一起。"]
   }, {
     "name": "masterpiece_20",
-    "src": "./src/assets/img/masterpiece_20.jpg",
+    "image": "masterpiece_20.jpg",
     "alt": "小狐狸",
     "skill": "不知道染",
     "introduce": ["在處理好的布上描繪線稿後，以一針一線仔細沿著畫好的輪廓遊走。當最後都縫製好時，用力拉扯預留的線頭，使布料緊密地重疊在一起。"]
