@@ -1,7 +1,3 @@
-<script setup>
-import BackgroundFlower from "./components/BackgroundFlower.vue";
-</script>
-
 <template>
   <main style="overflow: hidden">
     <section class="skill">
@@ -13,8 +9,8 @@ import BackgroundFlower from "./components/BackgroundFlower.vue";
           <li id="DD">植物染</li>
         </ul>
       </aside>
-      <h2 class="skill_name">蠟染</h2>
-      <div class="container a">
+      <h2 class="skill_name" ref="skill_name">蠟染</h2>
+      <div class="container a" ref="a">
         <div class="row">
           <div class="col col_12 col_md_4">
             <div class="pic">
@@ -70,7 +66,7 @@ import BackgroundFlower from "./components/BackgroundFlower.vue";
         </div>
       </div>
 
-      <div class="container none b">
+      <div class="container none b" ref="b">
         <div class="row">
           <div class="col col_12 col_md_4">
             <div class="pic">
@@ -119,6 +115,37 @@ import BackgroundFlower from "./components/BackgroundFlower.vue";
     <BackgroundFlower></BackgroundFlower>
   </main>
 </template>
+
+<script setup>
+import { ref, onMounted } from 'vue';
+import BackgroundFlower from "./components/BackgroundFlower.vue";
+// FIXME 修改偷懶寫法
+let a = ref(null);
+let b = ref(null);
+let skill_name = ref(null);
+window.addEventListener("load", function () {
+  AA.addEventListener("click", function () {
+    a.value.style.display = "block";
+    skill_name.value.innerText = "蠟染";
+    b.value.style.display = "none";
+  }, false);
+  BB.addEventListener("click", function () {
+    b.value.style.display = "block";
+    skill_name.value.innerText = "摺疊縫染";
+    a.value.style.display = "none";
+  }, false);
+  CC.addEventListener("click", function () {
+    a.value.style.display = "block";
+    skill_name.value.innerText = "縫染";
+    b.value.style.display = "none";
+  }, false);
+  DD.addEventListener("click", function () {
+    b.value.style.display = "block";
+    skill_name.value.innerText = "植物染";
+    a.value.style.display = "none";
+  }, false);
+}, false);
+</script>
 
 <style lang="scss" scoped>
 body {
