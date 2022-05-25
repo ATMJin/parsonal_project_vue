@@ -4,7 +4,8 @@
     <section class="masterpiece">
       <!-- 小圖 -->
       <div class="cover_min_pic">
-        <div class="min_pic">
+        <div class="min_pic" ref="min_pic" @mouseenter="clearXY" @mouseleave="X_or_Y" @touchstart="clearXY"
+          @touchend="X_or_Y">
           <div class="pic" v-for="(masterpiece, i) in masterpieces" :key="masterpiece.name">
             <img :src="`./src/assets/img/min/${masterpiece.image}`" :alt="masterpiece.alt" :data-picIndex="i"
               :data-picName="masterpiece.name" @click="changeCard($event)" />
@@ -119,46 +120,6 @@ fetch("./src/assets/data/data.json")
   .catch(err => console.log(err));
 
 
-
-
-let min_pics = document.getElementsByClassName("min_pic")[0];
-let x = 5;
-let y = 0;
-
-//橫向自動卷軸
-function min_pic_scroll_X() {
-  min_pics.scrollLeft += x;
-  if (min_pics.scrollLeft >= min_pics.scrollLeftMax - x) x = -x;
-  else if (min_pics.scrollLeft <= -x) x = -x;
-  //到底反轉
-  //TODO 無限輪播
-}
-//直向自動卷軸
-function min_pic_scroll_Y() {
-  min_pics.scrollTop += y;
-  if (min_pics.scrollTop >= min_pics.scrollTopMax - y) y = -y;
-  else if (min_pics.scrollTop <= -y) {
-    y = -y;
-  }
-}
-
-
-let XY;
-//直向或橫向
-function X_or_Y() {
-  if (min_pics.scrollLeft != min_pics.scrollLeftMax) {
-    clearInterval(XY);
-    XY = setInterval(min_pic_scroll_X, 30);
-  } else {
-    clearInterval(XY);
-    XY = setInterval(min_pic_scroll_Y, 30);
-  }
-}
-//TODO 記得反註解
-// X_or_Y();
-
-
-
 let show = ref(true);
 //點小圖換切換右側資訊
 const changeCard = (e) => {
@@ -176,23 +137,47 @@ const changeCard = (e) => {
 };
 
 
-
-let img = document.querySelectorAll(".min_pic .pic>img");
-
-function init() {
-  //滑鼠或觸控時停止或開啟輪播
-  min_pics.addEventListener("mousedown", () => clearInterval(XY), false);
-  min_pics.addEventListener("touchstart", () => clearInterval(XY), false);
-  min_pics.addEventListener("mouseup", X_or_Y, false);
-  min_pics.addEventListener("touchend", X_or_Y, false);
-  //小圖點擊更換圖文
-  for (let i = 0; i < img.length; i++) {
-    img[i].addEventListener("click", change_card, false);
+const min_pic = ref(null);
+let x = 5;
+let y = 0;
+//橫向自動卷軸
+const min_pic_scroll_X = () => {
+  min_pic.value.scrollLeft += x;
+  if (min_pic.value.scrollLeft >= min_pic.value.scrollLeftMax - x) x = -x;
+  else if (min_pic.value.scrollLeft <= -x) x = -x;
+  //到底反轉
+  //TODO 無限輪播
+};
+//直向自動卷軸
+const min_pic_scroll_Y = () => {
+  min_pic.value.scrollTop += y;
+  if (min_pic.value.scrollTop >= min_pic.value.scrollTopMax - y) y = -y;
+  else if (min_pic.value.scrollTop <= -y) {
+    y = -y;
   }
-}
+};
 
-// window.addEventListener("load", init, false);
-// window.addEventListener("resize", X_or_Y, false);
+let XY = ref();
+//直向或橫向
+const X_or_Y = () => {
+  if (min_pic.value.scrollTopMax == 0) {
+    clearInterval(XY.value);
+    min_pic_scroll_X();
+    XY.value = setInterval(min_pic_scroll_X, 30);
+  } else if (min_pic.value.scrollLeftMax == 0) {
+    clearInterval(XY.value);
+    min_pic_scroll_Y();
+    XY.value = setInterval(min_pic_scroll_Y, 30);
+  }
+};
+const clearXY = () => {
+  clearInterval(XY.value);
+};
+
+onMounted(() => {
+  window.addEventListener("load", X_or_Y);
+  window.addEventListener("resize", X_or_Y, false);
+});
 </script>
 
 <style lang="scss" scoped>
