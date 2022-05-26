@@ -89,9 +89,13 @@
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue';
-let masterpieces = ref([]);
-let piccard = ref({
+import { ref, reactive, onMounted, onBeforeUnmount } from 'vue';
+import { useDataStore } from './stores/data';
+const store = useDataStore();
+let masterpieces = reactive(store.masterpieces);
+
+// let masterpieces = ref([]);
+let piccard = reactive({
   name: "",
   src: "./src/assets/img/masterpiece_01.jpg",
   alt: "",
@@ -105,19 +109,26 @@ let tempcard = ref({
   intro: [],
   skill: ""
 });
+// piccard={...masterpieces[0]}
+piccard.src = `./src/assets/img/${masterpieces[0].image}`;
+piccard.alt = masterpieces[0].alt;
+piccard.name = masterpieces[0].name;
+piccard.intro = masterpieces[0].introduce;
+piccard.skill = masterpieces[0].skill;
 
-fetch("./src/assets/data/data.json")
-  .then(res => res.json())
-  .then(data => {
-    masterpieces.value = data.masterpiece;
-    piccard.value.src = `./src/assets/img/${masterpieces.value[0].image}`;
-    piccard.value.alt = masterpieces.value[0].alt;
-    piccard.value.name = masterpieces.value[0].name;
-    piccard.value.intro = masterpieces.value[0].introduce;
-    piccard.value.skill = masterpieces.value[0].skill;
-    tempcard.value = { ...piccard.value };
-  })
-  .catch(err => console.log(err));
+tempcard.value = { ...piccard };
+
+// fetch("./src/assets/data/data.json")
+//   .then(res => res.json())
+//   .then(data => {
+//     piccard.value.src = `./src/assets/img/${masterpieces.value[0].image}`;
+//     piccard.value.alt = masterpieces.value[0].alt;
+//     piccard.value.name = masterpieces.value[0].name;
+//     piccard.value.intro = masterpieces.value[0].introduce;
+//     piccard.value.skill = masterpieces.value[0].skill;
+//     tempcard.value = { ...piccard.value };
+//   })
+//   .catch(err => console.log(err));
 
 
 let show = ref(true);
@@ -125,12 +136,14 @@ let show = ref(true);
 const changeCard = (e) => {
   let picindex = e.target.dataset.picindex;
 
-  piccard.value.src = `./src/assets/img/${masterpieces.value[picindex].image}`;
-  piccard.value.alt = masterpieces.value[picindex].alt;
-  piccard.value.name = masterpieces.value[picindex].name;
-  piccard.value.intro = masterpieces.value[picindex].introduce;
-  piccard.value.skill = masterpieces.value[picindex].skill;
-  setTimeout(() => { tempcard.value = { ...piccard.value }; }, 1010);
+  piccard.src = `./src/assets/img/${masterpieces[picindex].image}`;
+  piccard.alt = masterpieces[picindex].alt;
+  piccard.name = masterpieces[picindex].name;
+  piccard.intro = masterpieces[picindex].introduce;
+  piccard.skill = masterpieces[picindex].skill;
+  console.log("before", tempcard.value);
+  setTimeout(() => { tempcard.value = { ...piccard }; console.log("after", tempcard); }, 1010);
+
   // 資訊切換時的效果
   // 切換class
   show.value = !show.value;
@@ -177,6 +190,9 @@ const clearXY = () => {
 onMounted(() => {
   window.addEventListener("load", X_or_Y);
   window.addEventListener("resize", X_or_Y, false);
+});
+onBeforeUnmount(() => {
+  clearInterval(XY.value);
 });
 </script>
 

@@ -62,21 +62,19 @@
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue';
+import { ref, reactive, onMounted } from 'vue';
+import { useDataStore } from './stores/data';
+console.log("course");
+const store = useDataStore();
+let courses = reactive(store.courses);
+console.log("store over");
 const pic_3d = ref(null);
 const out_3d = ref(null);
 const inner_3d = ref(null);
 const middle_3d = ref(null);
 const inner_3d_img = ref(null);
 const d3_position = ref(null);
-let courses = ref([]);
 
-fetch("./src/assets/data/data.json")
-  .then(res => res.json())
-  .then(data => {
-    courses.value = data.course;
-  })
-  .catch(err => console.log(err));;
 
 // 調整圖片距離，使圖片可以圍成圈
 const wResize = () => {

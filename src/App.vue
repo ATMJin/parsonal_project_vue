@@ -1,6 +1,19 @@
 <script setup>
 import WebHeader from "./components/WebHeader.vue";
 import WebFooter from "./components/WebFooter.vue";
+import { useDataStore } from './stores/data';
+console.log("app");
+const store = useDataStore();
+
+fetch("./src/assets/data/data.json")
+  .then(res => res.json())
+  .then(data => {
+    console.log("fetch");
+    store.courses = data.course;
+    store.masterpieces = data.masterpiece;
+    store.skills = data.skill;
+  })
+  .catch(err => console.log(err));
 </script>
 
 <template>
