@@ -9,16 +9,16 @@
           <button class="btn pre_pic"><i class="fas fa-angle-left"></i></button>
           <!-- 佔位用圖片 -->
           <div class="course_image nothing">
-            <img class=" nothing" src="./assets/img/master.jpg" alt="車縫染課程">
+            <img class=" nothing" src="../assets/img/master.jpg" alt="車縫染課程">
           </div>
           <div class="course_image carousel show">
-            <img class="" src="./assets/img/master.jpg" alt="車縫染課程">
+            <img class="" src="../assets/img/master.jpg" alt="車縫染課程">
           </div>
           <div class="course_image carousel hidden hidden_left">
-            <img class="" src="./assets/img/class_woman_169.jpg" alt="車縫染課程">
+            <img class="" src="../assets/img/class_woman_169.jpg" alt="車縫染課程">
           </div>
           <div class="course_image carousel hidden hidden_right">
-            <img class="" src="./assets/img/class_three_women_169.jpg" alt="車縫染課程">
+            <img class="" src="../assets/img/class_three_women_169.jpg" alt="車縫染課程">
           </div>
           <button class="btn next_pic"><i class="fas fa-angle-right"></i></button>
         </div>
@@ -59,16 +59,16 @@
       <section class="introduce_of_masterpiece">
         <h2>作品一覽</h2>
         <div class="big_flower">
-          <img src="./assets/img/masterpiece_wolf.jpg" alt="鯨魚" class="circle_in_flower">
-          <img src="./assets/img/masterpiece_wave.jpg" alt="" class="big_flower_petal big_flower_petal_top_left">
-          <img src="./assets/img/masterpiece_wolf.jpg" alt="" class="big_flower_petal big_flower_petal_top lighter">
-          <img src="./assets/img/min/masterpiece_11.jpg" alt="" class="big_flower_petal big_flower_petal_top_right">
-          <img src="./assets/img/masterpiece_whiteCircle_and_blueLine.jpg" alt=""
+          <img src="../assets/img/masterpiece_wolf.jpg" alt="鯨魚" class="circle_in_flower">
+          <img src="../assets/img/masterpiece_wave.jpg" alt="" class="big_flower_petal big_flower_petal_top_left">
+          <img src="../assets/img/masterpiece_wolf.jpg" alt="" class="big_flower_petal big_flower_petal_top lighter">
+          <img src="../assets/img/min/masterpiece_11.jpg" alt="" class="big_flower_petal big_flower_petal_top_right">
+          <img src="../assets/img/masterpiece_whiteCircle_and_blueLine.jpg" alt=""
             class="big_flower_petal big_flower_petal_right">
-          <img src="./assets/img/min/masterpiece_02.jpg" alt="" class="big_flower_petal big_flower_petal_bottom_right">
-          <img src="./assets/img/masterpiece_maria.jpg" alt="" class="big_flower_petal big_flower_petal_bottom">
-          <img src="./assets/img/masterpiece_happy_baby.jpg" alt="" class="big_flower_petal big_flower_petal_bottom_left">
-          <img src="./assets/img/masterpiece_ginkgo.jpg" alt="" class="big_flower_petal big_flower_petal_left">
+          <img src="../assets/img/min/masterpiece_02.jpg" alt="" class="big_flower_petal big_flower_petal_bottom_right">
+          <img src="../assets/img/masterpiece_maria.jpg" alt="" class="big_flower_petal big_flower_petal_bottom">
+          <img src="../assets/img/masterpiece_happy_baby.jpg" alt="" class="big_flower_petal big_flower_petal_bottom_left">
+          <img src="../assets/img/masterpiece_ginkgo.jpg" alt="" class="big_flower_petal big_flower_petal_left">
         </div>
         <div class="background_flower"></div>
         <div class="background_flower bgf2"></div>
@@ -90,12 +90,12 @@
           <div>
             <div class="skill_roulette">
               <div class="flower_roulette">
-                <img class="roulette_top_left" src="./assets/img/skill_heart_circle.jpg" alt="">
-                <img class="roulette_top lighter" src="./assets/img/masterpiece_eagle.jpg" alt="蠟染">
-                <img class="roulette_top_right" src="./assets/img/skill_linear_gradien.jpg" alt="">
-                <img class="roulette_bottom_right" src="./assets/img/skill_squir.jpg" alt="">
-                <img class="roulette_bottom" src="./assets/img/skill_whiteCircle_and_blueBackground.jpg" alt="綁染">
-                <img class="roulette_bottom_left" src="./assets/img/skill_leaf.jpg" alt="">
+                <img class="roulette_top_left" src="../assets/img/skill_heart_circle.jpg" alt="">
+                <img class="roulette_top lighter" src="../assets/img/masterpiece_eagle.jpg" alt="蠟染">
+                <img class="roulette_top_right" src="../assets/img/skill_linear_gradien.jpg" alt="">
+                <img class="roulette_bottom_right" src="../assets/img/skill_squir.jpg" alt="">
+                <img class="roulette_bottom" src="../assets/img/skill_whiteCircle_and_blueBackground.jpg" alt="綁染">
+                <img class="roulette_bottom_left" src="../assets/img/skill_leaf.jpg" alt="">
               </div>
             </div>
             <div class="skill_intro">
@@ -106,7 +106,7 @@
             </div>
           </div>
           <div class="skill_pic">
-            <img src="./assets/img/masterpiece_eagle.jpg" alt="綁染">
+            <img src="../assets/img/masterpiece_eagle.jpg" alt="綁染">
           </div>
 
 

@@ -90,7 +90,7 @@
 
 <script setup>
 import { ref, reactive, onMounted, onBeforeUnmount } from 'vue';
-import { useDataStore } from './stores/data';
+import { useDataStore } from '../stores/data';
 const store = useDataStore();
 let masterpieces = reactive(store.masterpieces);
 

@@ -3,11 +3,11 @@ import {
   createWebHistory
 } from "vue-router";
 
-import HomePage from '../HomePage.vue'
-import Course from '../Course.vue'
-import Masterpiece from '../Masterpiece.vue'
-import Skill from '../Skill.vue'
-import AboutMe from '../AboutMe.vue'
+import HomePage from '../page/HomePage.vue'
+import Course from '../page/Course.vue'
+import Masterpiece from '../page/Masterpiece.vue'
+import Skill from '../page/Skill.vue'
+import AboutMe from '../page/AboutMe.vue'
 
 const routes = [{
     // 網址路徑

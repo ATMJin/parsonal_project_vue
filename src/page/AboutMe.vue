@@ -4,7 +4,7 @@
       <h2>關於我</h2>
       <div class="topper">
         <div>
-          <div class="pic"><img src="./assets/img/master_02.jpg" alt="" /></div>
+          <div class="pic"><img src="../assets/img/master_02.jpg" alt="" /></div>
           <div>
             <p>
               我給自己取個名字叫春風，在網路上使用很多年，習慣了!哈哈
@@ -33,7 +33,7 @@
         <div class="row">
           <div class="col col_12 col_md_6">
             <div class="pic">
-              <img src="./assets/img/about_01.jpg" alt="" />
+              <img src="../assets/img/about_01.jpg" alt="" />
             </div>
           </div>
           <div class="col col_12 col_md_6">
@@ -52,7 +52,7 @@
         <div class="row">
           <div class="col col_12 col_md_6">
             <div class="pic">
-              <img src="./assets/img/about_02.jpg" alt="" />
+              <img src="../assets/img/about_02.jpg" alt="" />
             </div>
           </div>
           <div class="col col_12 col_md_6">
@@ -71,7 +71,7 @@
         <div class="row">
           <div class="col col_12 col_md_6">
             <div class="pic">
-              <img src="./assets/img/about_03.jpg" alt="" />
+              <img src="../assets/img/about_03.jpg" alt="" />
             </div>
           </div>
           <div class="col col_12 col_md_6">
@@ -90,7 +90,7 @@
         <div class="row">
           <div class="col col_12 col_md_6">
             <div class="pic">
-              <img src="./assets/img/about_04.jpg" alt="" />
+              <img src="../assets/img/about_04.jpg" alt="" />
             </div>
           </div>
           <div class="col col_12 col_md_6">
@@ -113,7 +113,7 @@
       </div>
       <div class="bottomer">
         <div>
-          <div class="pic"><img src="./assets/img/master_03.jpg" alt="" /></div>
+          <div class="pic"><img src="../assets/img/master_03.jpg" alt="" /></div>
           <div class="text">
             <p>
               目前成立「染一片春天」手作坊，以做中學為主旨，有時同學一起來切磋，教學也交朋友。
@@ -125,7 +125,7 @@
             </p>
           </div>
         </div>
-        <div class="pic"><img src="./assets/img/master_04_2.jpg" alt="" /></div>
+        <div class="pic"><img src="../assets/img/master_04_2.jpg" alt="" /></div>
       </div>
     </section>
   </main>
@@ -146,7 +146,7 @@ main {
   max-width: 1200px;
   margin: 0 auto;
 
-  > h2 {
+  >h2 {
     visibility: hidden;
   }
 
@@ -161,11 +161,11 @@ main {
   }
 }
 
-.pic > img {
+.pic>img {
   width: 100%;
 }
 
-.row + .row {
+.row+.row {
   padding-top: 20px;
   padding-bottom: 20px;
 }
@@ -185,7 +185,7 @@ main {
   }
 
   .topper {
-    > div:first-child {
+    >div:first-child {
       display: flex;
       margin-left: -20px;
       margin-right: -20px;
@@ -205,7 +205,7 @@ main {
     margin-right: -20px;
     position: relative;
 
-    + .row {
+    +.row {
       padding-top: 40px;
       padding-bottom: 40px;
     }
@@ -249,12 +249,12 @@ main {
   }
 
   .bottomer {
-    > div:first-child {
+    >div:first-child {
       display: flex;
       margin-bottom: 40px;
     }
 
-    > div:first-child .pic {
+    >div:first-child .pic {
       margin-right: 20px;
       flex-shrink: 0.7;
     }

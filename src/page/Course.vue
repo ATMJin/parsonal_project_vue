@@ -63,7 +63,7 @@
 
 <script setup>
 import { ref, reactive, onMounted } from 'vue';
-import { useDataStore } from './stores/data';
+import { useDataStore } from '../stores/data';
 console.log("course");
 const store = useDataStore();
 let courses = reactive(store.courses);

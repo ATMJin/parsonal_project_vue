@@ -14,7 +14,7 @@
         <div class="row">
           <div class="col col_12 col_md_4">
             <div class="pic">
-              <img src="./assets/img/skill_01.jpg" alt="" />
+              <img src="../assets/img/skill_01.jpg" alt="" />
             </div>
           </div>
           <div class="col col_12 col_md_8">
@@ -27,7 +27,7 @@
         <div class="row">
           <div class="col col_12 col_md_4">
             <div class="pic">
-              <img src="./assets/img/skill_02.jpg" alt="" />
+              <img src="../assets/img/skill_02.jpg" alt="" />
             </div>
           </div>
           <div class="col col_12 col_md_8">
@@ -40,7 +40,7 @@
         <div class="row">
           <div class="col col_12 col_md_4">
             <div class="pic">
-              <img src="./assets/img/skill_03.jpg" alt="" />
+              <img src="../assets/img/skill_03.jpg" alt="" />
             </div>
           </div>
           <div class="col col_12 col_md_8">
@@ -55,7 +55,7 @@
         <div class="row">
           <div class="col col_12 col_md_4">
             <div class="pic">
-              <img src="./assets/img/skill_04.jpg" alt="" />
+              <img src="../assets/img/skill_04.jpg" alt="" />
             </div>
           </div>
           <div class="col col_12 col_md_8">
@@ -70,7 +70,7 @@
         <div class="row">
           <div class="col col_12 col_md_4">
             <div class="pic">
-              <img src="./assets/img/skill_11.jpg" alt="" />
+              <img src="../assets/img/skill_11.jpg" alt="" />
             </div>
           </div>
           <div class="col col_12 col_md_8">
@@ -83,7 +83,7 @@
         <div class="row">
           <div class="col col_12 col_md_4">
             <div class="pic">
-              <img src="./assets/img/skill_12.jpg" alt="" />
+              <img src="../assets/img/skill_12.jpg" alt="" />
             </div>
           </div>
           <div class="col col_12 col_md_8">
@@ -98,7 +98,7 @@
         <div class="row">
           <div class="col col_12 col_md_4">
             <div class="pic">
-              <img src="./assets/img/skill_13.jpg" alt="" />
+              <img src="../assets/img/skill_13.jpg" alt="" />
             </div>
           </div>
           <div class="col col_12 col_md_8">
@@ -118,7 +118,7 @@
 
 <script setup>
 import { ref, onMounted } from 'vue';
-import BackgroundFlower from "./components/BackgroundFlower.vue";
+import BackgroundFlower from "../components/BackgroundFlower.vue";
 // FIXME 修改偷懶寫法
 let a = ref(null);
 let b = ref(null);
