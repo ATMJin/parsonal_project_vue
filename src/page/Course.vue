@@ -6,7 +6,7 @@
           <div class="col_12 col_md_4 col_xl_3" v-for="course in courses" :key="course.name">
             <div class="card">
               <div class="pic">
-                <img :src="course.image[0]" @click="open" />
+                <img :src="`./img/${course.image[0]}`" @click="open" />
               </div>
               <div class="text">
                 <div>
@@ -49,7 +49,7 @@
           <div class="out_3d" ref="out_3d">
             <div class="middle_3d" ref="middle_3d">
               <div v-for="i in 4" :key="i" :style="`--i: ${i - 1}`" class="inner_3d" ref="inner_3d">
-                <img :src="`./src/assets/img/course_0${i}.jpg`" ref="inner_3d_img" alt="" />
+                <img :src="`./img/course_0${i}.jpg`" ref="inner_3d_img" alt="" />
               </div>
             </div>
           </div>

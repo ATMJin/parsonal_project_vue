@@ -7,7 +7,7 @@
         <div class="min_pic" ref="min_pic" @mouseenter="clearXY" @mouseleave="X_or_Y" @touchstart="clearXY"
           @touchend="X_or_Y">
           <div class="pic" v-for="(masterpiece, i) in masterpieces" :key="masterpiece.name">
-            <img :src="`./src/assets/img/min/${masterpiece.image}`" :alt="masterpiece.alt" :data-picIndex="i"
+            <img :src="`./img/min/${masterpiece.image}`" :alt="masterpiece.alt" :data-picIndex="i"
               :data-picName="masterpiece.name" @click="changeCard($event)" />
           </div>
         </div>
@@ -97,20 +97,20 @@ let masterpieces = reactive(store.masterpieces);
 // let masterpieces = ref([]);
 let piccard = reactive({
   name: "",
-  src: "./src/assets/img/masterpiece_01.jpg",
+  src: "./img/masterpiece_01.jpg",
   alt: "",
   intro: [],
   skill: ""
 });
 let tempcard = ref({
   name: "",
-  src: "./src/assets/img/masterpiece_01.jpg",
+  src: "./img/masterpiece_01.jpg",
   alt: "",
   intro: [],
   skill: ""
 });
 // piccard={...masterpieces[0]}
-piccard.src = `./src/assets/img/${masterpieces[0].image}`;
+piccard.src = `./img/${masterpieces[0].image}`;
 piccard.alt = masterpieces[0].alt;
 piccard.name = masterpieces[0].name;
 piccard.intro = masterpieces[0].introduce;
@@ -118,31 +118,19 @@ piccard.skill = masterpieces[0].skill;
 
 tempcard.value = { ...piccard };
 
-// fetch("./src/assets/data/data.json")
-//   .then(res => res.json())
-//   .then(data => {
-//     piccard.value.src = `./src/assets/img/${masterpieces.value[0].image}`;
-//     piccard.value.alt = masterpieces.value[0].alt;
-//     piccard.value.name = masterpieces.value[0].name;
-//     piccard.value.intro = masterpieces.value[0].introduce;
-//     piccard.value.skill = masterpieces.value[0].skill;
-//     tempcard.value = { ...piccard.value };
-//   })
-//   .catch(err => console.log(err));
-
 
 let show = ref(true);
 //點小圖換切換右側資訊
 const changeCard = (e) => {
   let picindex = e.target.dataset.picindex;
 
-  piccard.src = `./src/assets/img/${masterpieces[picindex].image}`;
+  piccard.src = `./img/${masterpieces[picindex].image}`;
   piccard.alt = masterpieces[picindex].alt;
   piccard.name = masterpieces[picindex].name;
   piccard.intro = masterpieces[picindex].introduce;
   piccard.skill = masterpieces[picindex].skill;
-  console.log("before", tempcard.value);
-  setTimeout(() => { tempcard.value = { ...piccard }; console.log("after", tempcard); }, 1010);
+  // console.log("before", tempcard.value);
+  setTimeout(() => { tempcard.value = { ...piccard }; }, 1010);
 
   // 資訊切換時的效果
   // 切換class

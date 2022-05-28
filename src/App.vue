@@ -5,7 +5,7 @@ import { useDataStore } from './stores/data';
 console.log("app");
 const store = useDataStore();
 
-fetch("./src/assets/data/data.json")
+fetch("./data.json")
   .then(res => res.json())
   .then(data => {
     console.log("fetch");
