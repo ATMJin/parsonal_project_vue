@@ -2,8 +2,13 @@
 import WebHeader from "./components/WebHeader.vue";
 import WebFooter from "./components/WebFooter.vue";
 import { useDataStore } from './stores/data';
+import jsonData from "./assets/data/data.json";
 console.log("app");
 const store = useDataStore();
+console.log(jsonData);
+store.courses = jsonData.course;
+store.masterpieces = jsonData.masterpiece;
+store.skills = jsonData.skill;
 
 fetch("./data.json")
   .then(res => res.json())

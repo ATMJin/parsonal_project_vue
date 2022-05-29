@@ -2,10 +2,10 @@
   "course": [{
     "name": "蠟染",
     "image": [
-      "./src/assets/img/course_01.jpg",
-      "./src/assets/img/course_02.jpg",
-      "./src/assets/img/course_03.jpg",
-      "./src/assets/img/course_04.jpg"
+      "course_01.jpg",
+      "course_02.jpg",
+      "course_03.jpg",
+      "course_04.jpg"
     ],
     "people": 10,
     "item": false,
@@ -16,10 +16,10 @@
   }, {
     "name": "卷上絞技巧",
     "image": [
-      "./src/assets/img/course_02.jpg",
-      "./src/assets/img/course_02.jpg",
-      "./src/assets/img/course_03.jpg",
-      "./src/assets/img/course_04.jpg"
+      "course_02.jpg",
+      "course_02.jpg",
+      "course_03.jpg",
+      "course_04.jpg"
     ],
     "people": 10,
     "item": false,
@@ -30,10 +30,10 @@
   }, {
     "name": "軍隊縫",
     "image": [
-      "./src/assets/img/course_03.jpg",
-      "./src/assets/img/course_02.jpg",
-      "./src/assets/img/course_03.jpg",
-      "./src/assets/img/course_04.jpg"
+      "course_03.jpg",
+      "course_02.jpg",
+      "course_03.jpg",
+      "course_04.jpg"
     ],
     "people": 10,
     "item": false,
@@ -44,10 +44,10 @@
   }, {
     "name": "帽子絞",
     "image": [
-      "./src/assets/img/course_04.jpg",
-      "./src/assets/img/course_02.jpg",
-      "./src/assets/img/course_03.jpg",
-      "./src/assets/img/course_04.jpg"
+      "course_04.jpg",
+      "course_02.jpg",
+      "course_03.jpg",
+      "course_04.jpg"
     ],
     "people": 10,
     "item": false,
@@ -58,10 +58,10 @@
   }, {
     "name": "日出絞",
     "image": [
-      "./src/assets/img/course_05.jpg",
-      "./src/assets/img/course_02.jpg",
-      "./src/assets/img/course_03.jpg",
-      "./src/assets/img/course_04.jpg"
+      "course_05.jpg",
+      "course_02.jpg",
+      "course_03.jpg",
+      "course_04.jpg"
     ],
     "people": 10,
     "item": false,
@@ -72,10 +72,10 @@
   }, {
     "name": "水管紋",
     "image": [
-      "./src/assets/img/course_06.jpg",
-      "./src/assets/img/course_02.jpg",
-      "./src/assets/img/course_03.jpg",
-      "./src/assets/img/course_04.jpg"
+      "course_06.jpg",
+      "course_02.jpg",
+      "course_03.jpg",
+      "course_04.jpg"
     ],
     "people": 10,
     "item": false,
@@ -208,28 +208,28 @@
   "skill": [{
     "name": "蠟染",
     "step": [{
-      "image": "./src/assets/img/skill_01.jpg",
+      "image": "skill_01.jpg",
       "description": "首先在處理過的布上畫上草稿。"
     }, {
-      "image": "./src/assets/img/skill_02.jpg",
+      "image": "skill_02.jpg",
       "description": "接著再將融化的蠟用畫筆畫在布料上。"
     }, {
-      "image": "./src/assets/img/skill_03.jpg",
+      "image": "skill_03.jpg",
       "description": "等蠟凝固在布上後就可以把布放進染缸中染色了。因為有蠟的地方染液不容易進入，因此最後會形成淺色的區域。"
     }, {
-      "image": "./src/assets/img/skill_04.jpg",
+      "image": "skill_04.jpg",
       "description": "這就是我們的成品❤"
     }]
   }, {
     "name": "蠟染",
     "step": [{
-      "image": "./src/assets/img/skill_11.jpg",
+      "image": "skill_11.jpg",
       "description": "首先將布摺疊好。"
     }, {
-      "image": "./src/assets/img/skill_12.jpg",
+      "image": "skill_12.jpg",
       "description": "接著再將布用針線緊緊縫在一起。縫僅的地方會使染液不容易滲入。"
     }, {
-      "image": "./src/assets/img/skill_13.jpg",
+      "image": "skill_13.jpg",
       "description": "這就是我們的成品❤"
     }]
   }]
