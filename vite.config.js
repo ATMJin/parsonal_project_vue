@@ -10,6 +10,7 @@ export default defineConfig({
   plugins: [
     vue(),
     viteImagemin({
+
       gifsicle: {
         optimizationLevel: 7,
         interlaced: false,
